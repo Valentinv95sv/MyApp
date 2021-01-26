@@ -1,0 +1,12 @@
+C:\Users\balam\Desktop\github\MyApp\GUIHandlerDLL\bin\Debug\GUIHandlerDLL.dll
+C:\Users\balam\Desktop\github\MyApp\GUIHandlerDLL\bin\Debug\GUIHandlerDLL.pdb
+C:\Users\balam\Desktop\github\MyApp\GUIHandlerDLL\bin\Debug\IntelHexFormatReader.dll
+C:\Users\balam\Desktop\github\MyApp\GUIHandlerDLL\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\balam\Desktop\github\MyApp\GUIHandlerDLL\bin\Debug\RJCP.SerialPortStream.dll
+C:\Users\balam\Desktop\github\MyApp\GUIHandlerDLL\bin\Debug\RJCP.SerialPortStream.pdb
+C:\Users\balam\Desktop\github\MyApp\GUIHandlerDLL\bin\Debug\RJCP.SerialPortStream.xml
+C:\Users\balam\Desktop\github\MyApp\GUIHandlerDLL\obj\Debug\GUIHandlerDLL.csprojAssemblyReference.cache
+C:\Users\balam\Desktop\github\MyApp\GUIHandlerDLL\obj\Debug\GUIHandlerDLL.csproj.CoreCompileInputs.cache
+C:\Users\balam\Desktop\github\MyApp\GUIHandlerDLL\obj\Debug\GUIHandlerDLL.csproj.CopyComplete
+C:\Users\balam\Desktop\github\MyApp\GUIHandlerDLL\obj\Debug\GUIHandlerDLL.dll
+C:\Users\balam\Desktop\github\MyApp\GUIHandlerDLL\obj\Debug\GUIHandlerDLL.pdb
