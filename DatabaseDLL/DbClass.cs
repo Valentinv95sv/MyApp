@@ -7,27 +7,11 @@ namespace DatabaseDLL
     {
      private MySqlConnection _connection;
      private string message;
-     private string server { get; set; }
-     private string username { get; set; }
-     private string password { get; set; }
-     private string database { get; set; }
-
-        public DbClass(string server, string username, string password, string database)
+    
+        public void Connect(string connectionString)
         {
-            this.username = username;
-            this.database = database;
-            this.password = password;
-            this.server = server;
-            Initialize();    
-        }
-
-        public void Initialize()
-        {
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";";
             _connection = new MySqlConnection(connectionString);
         }
-        
         public bool OpenConnection()
         {
             try
@@ -90,9 +74,9 @@ namespace DatabaseDLL
             }
         }
         
-        public void Insert()
+        public void Insert(string i)
         {
-            string query = "INSERT INTO mytable (test) VALUES ('test')";
+            string query = "INSERT INTO mytable (test) VALUES (" + i + ")";
             if (this.OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, _connection);

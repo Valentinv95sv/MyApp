@@ -37,3 +37,5 @@ C:\Users\balam\Desktop\github\MyApp\MyApp\bin\Debug\System.Runtime.CompilerServi
 C:\Users\balam\Desktop\github\MyApp\MyApp\bin\Debug\DatabaseDLL.pdb
 C:\Users\balam\Desktop\github\MyApp\MyApp\bin\Debug\GUIHandlerDLL.pdb
 C:\Users\balam\Desktop\github\MyApp\MyApp\obj\Debug\MyApp.exe.config
+C:\Users\balam\Desktop\github\MyApp\MyApp\obj\Debug\GUIHandlerDLL.myForm.resources
+C:\Users\balam\Desktop\github\MyApp\MyApp\obj\Debug\MyApp.DatabaseForm.resources

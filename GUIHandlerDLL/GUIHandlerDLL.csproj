@@ -32,6 +32,10 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="ArduinoUploader, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\packages\ArduinoUploader.3.2.0\lib\net452\ArduinoUploader.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
         <Reference Include="IntelHexFormatReader, Version=2.2.1.0, Culture=neutral, PublicKeyToken=null">
           <HintPath>..\packages\IntelHexFormatReader.2.2.1\lib\net452\IntelHexFormatReader.dll</HintPath>
           <Private>True</Private>
@@ -107,16 +111,24 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="GuiHandler.cs" />
-        <Compile Include="myForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="myForm.Designer.cs">
-          <DependentUpon>myForm.cs</DependentUpon>
-        </Compile>
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\ComPortParserDLL\ComPortParserDLL.csproj">
+        <Project>{ee4f1387-c76b-47b3-8cfc-050d1609a4b4}</Project>
+        <Name>ComPortParserDLL</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\DatabaseDLL\DatabaseDLL.csproj">
+        <Project>{c6a2255f-83a1-45ca-8f92-0c845b33f7a4}</Project>
+        <Name>DatabaseDLL</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\SketchUploaderDLL\SketchUploaderDLL.csproj">
+        <Project>{707dcb9d-953a-4967-bc54-0abed3a5ebe6}</Project>
+        <Name>SketchUploaderDLL</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

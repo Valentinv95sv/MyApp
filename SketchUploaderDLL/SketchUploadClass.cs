@@ -1,4 +1,5 @@
-﻿using ArduinoUploader;
+﻿using System.Collections.Generic;
+using ArduinoUploader;
 using ArduinoUploader.Hardware;
 
 namespace SketchUploaderDLL
