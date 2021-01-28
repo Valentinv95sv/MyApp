@@ -34,7 +34,6 @@ namespace DatabaseDLL
                 return false;
             }
         }
-        
         public bool CloseConnection()
         {
             try
@@ -84,7 +83,6 @@ namespace DatabaseDLL
                 this.CloseConnection();
             }
         }
-        
         public void Update()
         {
             string query = "UPDATE mytable SET test = 'hello' WHERE test = '32'";
@@ -97,7 +95,6 @@ namespace DatabaseDLL
                 this.CloseConnection();
             }
         }
-        
         public void Delete()
         {
             string query = "DELETE FROM mytable WHERE test='23'";
@@ -108,7 +105,6 @@ namespace DatabaseDLL
                 this.CloseConnection();
             }
         }
-        
         public int Count()
         {
             string query = "SELECT Count(*) FROM mytable";
@@ -125,6 +121,11 @@ namespace DatabaseDLL
             {
                 return Count;
             }
-        }   
+        }
+
+        public string getmessage()
+        {
+            return message;
+        }
     }
 }

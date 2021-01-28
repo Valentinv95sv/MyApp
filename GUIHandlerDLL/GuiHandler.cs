@@ -77,22 +77,19 @@ namespace GUIHandlerDLL
         {
             string connectionOption ="SERVER=" + "localhost" + ";" + "DATABASE=" + "ArduinoDatabase" + ";" +
                                      "UID=" + username + ";" + "PASSWORD=" + password + ";";
-            db.Connect(connectionOption);
+            
             try
             {
+                db.Connect(connectionOption);
+                MessageBox.Show(db.getmessage());
                 if (db.OpenConnection())
                 {
                     db.CloseConnection();
-                    MessageBox.Show("successfully connected to DB");
-                }
-                else
-                {
-                    MessageBox.Show("not connected");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
         }
         public List<string> dbCount()
