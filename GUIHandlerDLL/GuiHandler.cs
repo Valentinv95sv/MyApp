@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Ports;
+using System.Linq;
 using ArduinoUploader.Hardware;
 using ComPortParserDLL;
 using DatabaseDLL;
@@ -13,6 +14,7 @@ namespace GUIHandlerDLL
     {
         private DbClass db = new DbClass();
         private uploaderClass uploader;
+        private ComPort _port;
 
         public void Init(string Filename, ArduinoModel model, string port, int baudrate)
         {
@@ -81,7 +83,7 @@ namespace GUIHandlerDLL
             try
             {
                 db.Connect(connectionOption);
-                MessageBox.Show(db.getmessage());
+                MessageBox.Show("connected");
                 if (db.OpenConnection())
                 {
                     db.CloseConnection();
@@ -89,22 +91,52 @@ namespace GUIHandlerDLL
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
-        public List<string> dbCount()
+        public List<string> select()
         {
             List<string> i = new List<string>();
             i = db.Select();
             return i;
         }
 
-        public void insert()
+        public List<string> selectLastFive()
         {
-            string a = "hello";
-            db.Insert(a);
+            List<string> list = new List<string>();
+            list = db.Select();
+            list = Enumerable.Reverse(list).Take(5).Reverse().ToList();
+            return list;
         }
         
+        public void delete()
+        {
+            db.Delete();
+        }
+
+        public void insert(string a)
+        {
+            db.Insert(a);
+        }
+
+        public string dataFromArduino()
+        {
+            return _port.getData();
+        }
+
+        public void PortInit()
+        {
+            _port = new ComPort("COM3", 9600);   
+        }
         
+        public void closeCon()
+        {
+            _port.DisconnectFromArduino();
+        }
+
+        public void openCon()
+        {
+            _port.ConnectToArduino();
+        }
     }
 }

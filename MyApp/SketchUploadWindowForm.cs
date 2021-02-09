@@ -50,6 +50,7 @@ namespace GUIHandlerDLL
                 _handler.Init(textBox1.Text.ToString(), model: _handler.SetModel(comboBox1.SelectedItem.ToString()),
                     comboBox2.SelectedItem.ToString(), 9600);
                 MessageBox.Show("Sketch download proccess is successful");
+                
             }
             catch (Exception ex)
             {

@@ -31,7 +31,7 @@ namespace ComPortParserDLL
             return ports;
         }
 
-        public string ConnectToArduino()
+        public void ConnectToArduino()
         {
             try
             {
@@ -40,29 +40,30 @@ namespace ComPortParserDLL
                 myport.BaudRate = baudrate;
                 myport.Open();
                 message = "connectes";
-                return message;
             }
             catch (Exception ex)
             {
                 message = ex.Message;
-                return message;
             }
         }
 
-        public string DisconnectFromArduino()
+        public void DisconnectFromArduino()
         {
             try
             {
                 isConnected = false;
                 myport.Close();
                 message = "disconnect";
-                return message;
             }
             catch (Exception ex)
             {
                 message = ex.Message;
-                return message;
             }
+        }
+
+        public string getData()
+        {
+            return myport.ReadExisting();
         }
     }
 }

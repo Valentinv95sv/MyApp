@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 
 namespace DatabaseDLL
@@ -10,7 +11,14 @@ namespace DatabaseDLL
     
         public void Connect(string connectionString)
         {
-            _connection = new MySqlConnection(connectionString);
+            try
+            {
+                _connection = new MySqlConnection(connectionString);
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+            }
         }
         public bool OpenConnection()
         {
@@ -60,9 +68,8 @@ namespace DatabaseDLL
 
                 while (dataReader.Read())
                 {
-                    list.Add(dataReader["test"] + "");
+                    list.Add(dataReader["Data"] + "  |   " + dataReader["test"]);
                 }
-
                 dataReader.Close();
                 this.CloseConnection();
                 return list;
@@ -72,10 +79,10 @@ namespace DatabaseDLL
                 return list;
             }
         }
-        
+
         public void Insert(string i)
         {
-            string query = "INSERT INTO mytable (test) VALUES (" + i + ")";
+            string query = "INSERT INTO mytable (test) VALUES ('" + i +"')";
             if (this.OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, _connection);
@@ -88,16 +95,14 @@ namespace DatabaseDLL
             string query = "UPDATE mytable SET test = 'hello' WHERE test = '32'";
             if (this.OpenConnection() == true)
             {
-                MySqlCommand cmd = new MySqlCommand();
-                cmd.CommandText = query;
-                cmd.Connection = _connection;
+                MySqlCommand cmd = new MySqlCommand(query, _connection);
                 cmd.ExecuteNonQuery();
                 this.CloseConnection();
             }
         }
         public void Delete()
         {
-            string query = "DELETE FROM mytable WHERE test='23'";
+            string query = "DELETE FROM mytable ORDER BY 'test' DESC LIMIT 1";
             if (this.OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, _connection);

@@ -25,7 +25,10 @@ namespace MyApp
         private void button2_Click(object sender, EventArgs e)
         {
             dbform.ShowDialog();
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
         }
     }
 }
