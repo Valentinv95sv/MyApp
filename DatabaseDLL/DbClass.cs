@@ -132,5 +132,16 @@ namespace DatabaseDLL
         {
             return message;
         }
+
+        public void deledeAll()
+        {
+            string query = "TRUNCATE TABLE mytable";
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, _connection);
+                cmd.ExecuteNonQuery();
+                this.CloseConnection();
+            }
+        }
     }
 }

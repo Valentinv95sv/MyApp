@@ -47,6 +47,7 @@ namespace MyApp
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.timer1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,9 +107,13 @@ namespace MyApp
             // 
             // textBox1
             // 
+            this.textBox1.AcceptsReturn = true;
+            this.textBox1.AcceptsTab = true;
+            this.textBox1.AllowDrop = true;
             this.textBox1.Location = new System.Drawing.Point(54, 142);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(320, 404);
             this.textBox1.TabIndex = 10;
             // 
@@ -117,6 +122,7 @@ namespace MyApp
             this.textBox4.Location = new System.Drawing.Point(481, 142);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
+            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox4.Size = new System.Drawing.Size(310, 404);
             this.textBox4.TabIndex = 11;
             // 
@@ -184,7 +190,7 @@ namespace MyApp
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(922, 345);
+            this.button6.Location = new System.Drawing.Point(1045, 482);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(142, 41);
             this.button6.TabIndex = 19;
@@ -192,11 +198,22 @@ namespace MyApp
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(841, 477);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(149, 50);
+            this.button8.TabIndex = 20;
+            this.button8.Text = "Delete all data";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // DatabaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1390, 655);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -218,6 +235,8 @@ namespace MyApp
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button button8;
 
         private System.Windows.Forms.Button button6;
 

@@ -119,6 +119,11 @@ namespace GUIHandlerDLL
             db.Insert(a);
         }
 
+        public void deleteAll()
+        {
+            db.deledeAll();
+        }
+
         public string dataFromArduino()
         {
             return _port.getData();
@@ -126,7 +131,7 @@ namespace GUIHandlerDLL
 
         public void PortInit()
         {
-            _port = new ComPort("COM3", 9600);   
+            _port = new ComPort("COM4", 9600);   
         }
         
         public void closeCon()

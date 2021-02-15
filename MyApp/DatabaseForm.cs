@@ -19,6 +19,7 @@ namespace MyApp
             _timer.Enabled = false;
             _timer.Elapsed += timer1_Elapsed;
             _handler.PortInit();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -76,6 +77,11 @@ namespace MyApp
             textBox1.Clear();
             textBox4.Clear();
             
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            _handler.deleteAll();
         }
     }
 }
