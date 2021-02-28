@@ -97,7 +97,7 @@ namespace MyApp
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(64, 577);
+            this.button2.Location = new System.Drawing.Point(54, 577);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(215, 47);
             this.button2.TabIndex = 9;
@@ -164,11 +164,11 @@ namespace MyApp
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(1096, 565);
+            this.button7.Location = new System.Drawing.Point(841, 325);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(112, 59);
+            this.button7.Size = new System.Drawing.Size(173, 59);
             this.button7.TabIndex = 16;
-            this.button7.Text = "close";
+            this.button7.Text = "close connection with arduino";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -190,7 +190,7 @@ namespace MyApp
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1045, 482);
+            this.button6.Location = new System.Drawing.Point(841, 425);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(142, 41);
             this.button6.TabIndex = 19;
@@ -200,7 +200,7 @@ namespace MyApp
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(841, 477);
+            this.button8.Location = new System.Drawing.Point(841, 496);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(149, 50);
             this.button8.TabIndex = 20;
@@ -212,7 +212,7 @@ namespace MyApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1390, 655);
+            this.ClientSize = new System.Drawing.Size(1121, 655);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label4);

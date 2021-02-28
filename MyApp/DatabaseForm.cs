@@ -29,6 +29,7 @@ namespace MyApp
 
         private void button2_Click(object sender, EventArgs e)
         {
+            textBox1.Clear();
             List<string> list = new List<string>();
             list = _handler.select();
             foreach (var i in list)
@@ -40,6 +41,7 @@ namespace MyApp
 
         private void button4_Click(object sender, EventArgs e)
         {
+            textBox4.Clear();
             foreach (var i in _handler.selectLastFive())
             {
                 textBox4.AppendText(i);
@@ -76,7 +78,6 @@ namespace MyApp
         {
             textBox1.Clear();
             textBox4.Clear();
-            
         }
 
         private void button8_Click(object sender, EventArgs e)

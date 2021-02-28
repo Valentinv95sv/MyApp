@@ -24,7 +24,7 @@ namespace GUIHandlerDLL
 
         public string openfile()
         {
-            using (FileDialog fbd = new OpenFileDialog())
+            using (FileDialog fbd = new OpenFileDialog())  
             {
                 if (fbd.ShowDialog() == DialogResult.OK)
                 {
