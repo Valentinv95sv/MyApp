@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Windows.Forms;
 using ArduinoUploader;
 using ArduinoUploader.Hardware;
 
@@ -6,6 +7,7 @@ namespace SketchUploaderDLL
 {
     public class uploaderClass
     {
+        private uploaderClass _uploaderClass;
         
         private string filename { get; set; }
         private string portname { get; set; }
