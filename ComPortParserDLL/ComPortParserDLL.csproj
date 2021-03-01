@@ -41,12 +41,6 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="ComPort.cs" />
-        <Compile Include="ComPortParserForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="ComPortParserForm.Designer.cs">
-          <DependentUpon>ComPortParserForm.cs</DependentUpon>
-        </Compile>
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

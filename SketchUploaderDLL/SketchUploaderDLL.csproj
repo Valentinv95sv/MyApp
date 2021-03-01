@@ -112,19 +112,19 @@
     <ItemGroup>
         <Compile Include="SketchUploadClass.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="SketchUploaderDllForm.cs">
+        <Compile Include="SketchUploaderForm.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="SketchUploaderDllForm.Designer.cs">
-          <DependentUpon>SketchUploaderDllForm.cs</DependentUpon>
+        <Compile Include="SketchUploaderForm.Designer.cs">
+          <DependentUpon>SketchUploaderForm.cs</DependentUpon>
         </Compile>
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
     </ItemGroup>
     <ItemGroup>
-      <EmbeddedResource Include="SketchUploaderDllForm.resx">
-        <DependentUpon>SketchUploaderDllForm.cs</DependentUpon>
+      <EmbeddedResource Include="SketchUploaderForm.resx">
+        <DependentUpon>SketchUploaderForm.cs</DependentUpon>
       </EmbeddedResource>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,3 +4,9 @@ C:\Users\balam\Desktop\github\MyApp\ComPortParserDLL\obj\Debug\ComPortParserDLL.
 C:\Users\balam\Desktop\github\MyApp\ComPortParserDLL\obj\Debug\ComPortParserDLL.csproj.CoreCompileInputs.cache
 C:\Users\balam\Desktop\github\MyApp\ComPortParserDLL\obj\Debug\ComPortParserDLL.dll
 C:\Users\balam\Desktop\github\MyApp\ComPortParserDLL\obj\Debug\ComPortParserDLL.pdb
+C:\Users\balamut\RiderProjects\MyApp\ComPortParserDLL\bin\Debug\ComPortParserDLL.dll
+C:\Users\balamut\RiderProjects\MyApp\ComPortParserDLL\bin\Debug\ComPortParserDLL.pdb
+C:\Users\balamut\RiderProjects\MyApp\ComPortParserDLL\obj\Debug\ComPortParserDLL.csprojAssemblyReference.cache
+C:\Users\balamut\RiderProjects\MyApp\ComPortParserDLL\obj\Debug\ComPortParserDLL.csproj.CoreCompileInputs.cache
+C:\Users\balamut\RiderProjects\MyApp\ComPortParserDLL\obj\Debug\ComPortParserDLL.dll
+C:\Users\balamut\RiderProjects\MyApp\ComPortParserDLL\obj\Debug\ComPortParserDLL.pdb

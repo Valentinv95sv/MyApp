@@ -82,7 +82,7 @@ namespace GUIHandlerDLL
             
             try
             {
-                db.Connect(connectionOption);
+                //db.Connect(connectionOption);
                 MessageBox.Show("connected");
                 if (db.OpenConnection())
                 {
@@ -121,7 +121,7 @@ namespace GUIHandlerDLL
 
         public void deleteAll()
         {
-            db.deledeAll();
+           // db.deledeAll();
         }
 
         public string dataFromArduino()

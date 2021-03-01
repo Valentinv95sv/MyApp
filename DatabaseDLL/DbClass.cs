@@ -1,25 +1,39 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using System.Collections.Generic;
+using System.IO.Ports;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace DatabaseDLL
 {
     public class DbClass
     {
-     private MySqlConnection _connection;
-     private string message;
+        private MySqlConnection _connection;
+        private DbClass _dbClass;
+        private string message;
+        private SerialPort port;
+     
     
-        public void Connect(string connectionString)
+        public void Connect(string username, string password)
         {
+            string connectionString = "SERVER=" + "localhost" + ";" + "DATABASE=" + "ArduinoDatabase" + ";" +
+                                      "UID=" + username + ";" + "PASSWORD=" + password + ";";
+            
             try
             {
                 _connection = new MySqlConnection(connectionString);
+                MessageBox.Show("connected");
+                if (_dbClass.OpenConnection())
+                {
+                    CloseConnection();
+                }
             }
             catch (Exception ex)
             {
                 message = ex.Message;
             }
+            
         }
         public bool OpenConnection()
         {
@@ -56,8 +70,9 @@ namespace DatabaseDLL
                 return false;
             }
         }
+
         
-        public List<string> Select()
+       public List<string> Select()
         {
             string query = "SELECT * FROM mytable";
             List<string> list = new List<string>();
@@ -80,6 +95,14 @@ namespace DatabaseDLL
                 return list;
             }
         }
+       
+       public List<string> selectLastFive()
+       {
+           List<string> list = new List<string>();
+           list = _dbClass.Select();
+           list = Enumerable.Reverse(list).Take(5).Reverse().ToList();
+           return list;
+       }       
 
         public void Insert(string i)
         {
@@ -111,6 +134,9 @@ namespace DatabaseDLL
                 this.CloseConnection();
             }
         }
+        
+        
+        
         public int Count()
         {
             string query = "SELECT Count(*) FROM mytable";
@@ -134,7 +160,7 @@ namespace DatabaseDLL
             return message;
         }
 
-        public void deledeAll()
+        public void deleteAll()
         {
             string query = "TRUNCATE TABLE mytable";
             if (this.OpenConnection() == true)
