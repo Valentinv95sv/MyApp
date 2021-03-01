@@ -14,6 +14,7 @@ namespace DatabaseDLL
         public DatabaseForm()
         {
             InitializeComponent();
+            _dbClass = new DbClass();
         }
         
         

@@ -10,21 +10,20 @@ namespace DatabaseDLL
     public class DbClass
     {
         private MySqlConnection _connection;
-        private DbClass _dbClass;
         private string message;
         private SerialPort port;
      
     
         public void Connect(string username, string password)
         {
-            string connectionString = "SERVER=" + "localhost" + ";" + "DATABASE=" + "ArduinoDatabase" + ";" +
+            string connectionString = "SERVER=" + "localhost" + ";" + "DATABASE=" + "arduinodatabase" + ";" +
                                       "UID=" + username + ";" + "PASSWORD=" + password + ";";
             
             try
             {
                 _connection = new MySqlConnection(connectionString);
                 MessageBox.Show("connected");
-                if (_dbClass.OpenConnection())
+                if (OpenConnection())
                 {
                     CloseConnection();
                 }
@@ -99,7 +98,7 @@ namespace DatabaseDLL
        public List<string> selectLastFive()
        {
            List<string> list = new List<string>();
-           list = _dbClass.Select();
+           list = Select();
            list = Enumerable.Reverse(list).Take(5).Reverse().ToList();
            return list;
        }       

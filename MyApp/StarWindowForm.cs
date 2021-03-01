@@ -11,11 +11,9 @@ namespace MyApp
     {
         private DatabaseForm dbform;
         private SketchUploaderForm _uploaderForm;
-        private DatabaseForm dbForm;
         public Form1()
         {
             InitializeComponent();
-            //dbform = new DatabaseForm();
             _uploaderForm = new SketchUploaderForm();
             dbform = new DatabaseForm();
         }
