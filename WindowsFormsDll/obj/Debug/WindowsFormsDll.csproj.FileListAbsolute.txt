@@ -66,3 +66,5 @@ C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\obj\Debug\WindowsFormsDll.c
 C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\obj\Debug\WindowsFormsDll.csproj.CopyComplete
 C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\obj\Debug\WindowsFormsDll.dll
 C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\obj\Debug\WindowsFormsDll.pdb
+C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\obj\Debug\WindowsFormsDll.DiagrammsForm.resources
+C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\obj\Debug\WindowsFormsDll.WorkWithArduinoForm.resources

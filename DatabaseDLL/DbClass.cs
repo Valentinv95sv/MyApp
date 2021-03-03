@@ -103,9 +103,30 @@ namespace DatabaseDLL
            return list;
        }       
 
-        public void Insert(string i)
+        public void Insert(string[] i, string[] table)
         {
-            string query = "INSERT INTO mytable (test) VALUES ('" + i +"')";
+            
+            string query = "INSERT INTO mytable (";
+            foreach (var j in table)
+            {
+                string z = String.Format("{0},", j);
+                query += z;
+            }
+
+            query = query.Remove(query.Length - 1);
+            query += " ) VALUES (";
+            
+            foreach (var k in i)
+            {
+                string y;
+                y = String.Format("{0},", k );  
+                query += y;
+                }
+
+            query = query.Remove(query.Length - 1);
+            query += ")";
+            
+            //string query = "INSERT INTO mytable (" + table[0] + "," + table[1] + " ) VALUES (" + i[0] + "," + i[1] + ")";
             if (this.OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, _connection);
@@ -113,6 +134,10 @@ namespace DatabaseDLL
                 this.CloseConnection();
             }
         }
+        
+        
+        
+        
         public void Update()
         {
             string query = "UPDATE mytable SET test = 'hello' WHERE test = '32'";

@@ -107,10 +107,17 @@
           <Private>True</Private>
         </Reference>
         <Reference Include="System.Windows.Forms" />
+        <Reference Include="System.Windows.Forms.DataVisualization" />
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Class1.cs" />
+        <Compile Include="DiagrammsForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="DiagrammsForm.Designer.cs">
+          <DependentUpon>DiagrammsForm.cs</DependentUpon>
+        </Compile>
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="SketchUploaderForm1.cs">
           <SubType>Form</SubType>
@@ -140,8 +147,14 @@
       </ProjectReference>
     </ItemGroup>
     <ItemGroup>
+      <EmbeddedResource Include="DiagrammsForm.resx">
+        <DependentUpon>DiagrammsForm.cs</DependentUpon>
+      </EmbeddedResource>
       <EmbeddedResource Include="SketchUploaderForm1.resx">
         <DependentUpon>SketchUploaderForm1.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="WorkWithArduinoForm.resx">
+        <DependentUpon>WorkWithArduinoForm.cs</DependentUpon>
       </EmbeddedResource>
     </ItemGroup>
     <ItemGroup>

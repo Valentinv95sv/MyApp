@@ -59,9 +59,11 @@ namespace WindowsFormsDll
         
         private void timer1_Elapsed(object sender, ElapsedEventArgs e)
         {
-            string a = _comPort.getData();
-            _dbClass.Insert(a);
-            textBox4.AppendText(a);
+            //string a = _comPort.getData();
+            string[] b = {"Data", "test"};
+            string[] a = _comPort.Split(_comPort.getData());
+            _dbClass.Insert(a, b);
+            textBox4.AppendText(a[0] + " | " + a[1]);
             textBox4.AppendText(Environment.NewLine);
         }
 
@@ -87,5 +89,6 @@ namespace WindowsFormsDll
         {
             _dbClass.deleteAll();
         }
+        
     }
 }

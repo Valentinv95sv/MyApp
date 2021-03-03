@@ -65,5 +65,12 @@ namespace ComPortParserDLL
         {
             return myport.ReadExisting().ToString();
         }
+
+        public string[] Split(string list)
+        {
+            string[] separator = {"/", ",", ";"};
+            string[] a = list.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+            return a;
+        }
     }
 }
