@@ -40,3 +40,5 @@ C:\Users\balamut\RiderProjects\MyApp\DatabaseDLL\obj\Debug\DatabaseDLL.dll
 C:\Users\balamut\RiderProjects\MyApp\DatabaseDLL\obj\Debug\DatabaseDLL.pdb
 C:\Users\balamut\RiderProjects\MyApp\DatabaseDLL\obj\Debug\DatabaseDLL.DatabaseForm.resources
 C:\Users\balamut\RiderProjects\MyApp\DatabaseDLL\obj\Debug\DatabaseDLL.csproj.GenerateResource.cache
+C:\Users\balam\Desktop\github\MyApp\DatabaseDLL\obj\Debug\DatabaseDLL.DatabaseForm.resources
+C:\Users\balam\Desktop\github\MyApp\DatabaseDLL\obj\Debug\DatabaseDLL.csproj.GenerateResource.cache

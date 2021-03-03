@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Timers;
 using System.Windows.Forms;
+using ComPortParserDLL;
+using DatabaseDLL;
 
-namespace DatabaseDLL
+namespace WindowsFormsDll
 {
-    public partial class DatabaseForm : Form
+    public partial class WorkWithArduinoForm : Form
     {
         private DbClass _dbClass;
+        private ComPort comport;
         private static System.Timers.Timer _timer;
         
-        
-        public DatabaseForm()
+        public WorkWithArduinoForm()
         {
             InitializeComponent();
-            _dbClass = new DbClass();
         }
-        
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             _dbClass.Connect(textBox2.Text.ToString(), textBox3.Text.ToString());

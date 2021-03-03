@@ -176,6 +176,10 @@
         <Project>{707dcb9d-953a-4967-bc54-0abed3a5ebe6}</Project>
         <Name>SketchUploaderDLL</Name>
       </ProjectReference>
+      <ProjectReference Include="..\WindowsFormsDll\WindowsFormsDll.csproj">
+        <Project>{847e6cf5-9e9e-4e7b-a27f-59d404132ab7}</Project>
+        <Name>WindowsFormsDll</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

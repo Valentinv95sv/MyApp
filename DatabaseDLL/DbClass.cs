@@ -30,7 +30,7 @@ namespace DatabaseDLL
             }
             catch (Exception ex)
             {
-                message = ex.Message;
+                MessageBox.Show(ex.Message);
             }
             
         }

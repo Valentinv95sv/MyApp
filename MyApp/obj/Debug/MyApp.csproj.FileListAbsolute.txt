@@ -38,7 +38,6 @@ C:\Users\balam\Desktop\github\MyApp\MyApp\bin\Debug\DatabaseDLL.pdb
 C:\Users\balam\Desktop\github\MyApp\MyApp\bin\Debug\GUIHandlerDLL.pdb
 C:\Users\balam\Desktop\github\MyApp\MyApp\obj\Debug\MyApp.exe.config
 C:\Users\balam\Desktop\github\MyApp\MyApp\obj\Debug\GUIHandlerDLL.myForm.resources
-C:\Users\balam\Desktop\github\MyApp\MyApp\obj\Debug\MyApp.DatabaseForm.resources
 C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Debug\MyApp.exe.config
 C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Debug\MyApp.exe
 C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Debug\MyApp.pdb
@@ -79,3 +78,5 @@ C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Debug\MyApp.csproj.CopyComplete
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Debug\MyApp.exe
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Debug\MyApp.pdb
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Debug\GUIHandlerDLL.myForm.resources
+C:\Users\balam\Desktop\github\MyApp\MyApp\bin\Debug\WindowsFormsDll.dll
+C:\Users\balam\Desktop\github\MyApp\MyApp\bin\Debug\WindowsFormsDll.pdb
