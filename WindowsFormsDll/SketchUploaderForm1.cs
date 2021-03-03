@@ -56,8 +56,8 @@ namespace WindowsFormsDll
         {
             try
             {
-                _uploader.uploadSketch(textBox1.Text.ToString(), model: _uploader.SetModel(comboBox1.SelectedItem.ToString()),
-                    comboBox2.SelectedItem.ToString(), 9600);
+                _uploader.uploadSketch(textBox1.Text.ToString(), model: _uploader.SetModel(comboBox1.Text.ToString()),
+                    comboBox2.Text.ToString(), 9600);
                 MessageBox.Show("Sketch download proccess is successful");
                 
             }

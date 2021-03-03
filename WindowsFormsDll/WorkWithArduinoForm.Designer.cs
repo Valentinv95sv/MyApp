@@ -250,7 +250,6 @@ namespace WindowsFormsDll
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WorkWithArduinoForm";
             this.Text = "DatabaseForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize) (this.timer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
