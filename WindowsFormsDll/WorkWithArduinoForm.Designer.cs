@@ -158,7 +158,7 @@ namespace WindowsFormsDll
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(459, 230);
+            this.button5.Location = new System.Drawing.Point(458, 271);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -206,7 +206,7 @@ namespace WindowsFormsDll
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(459, 95);
+            this.button6.Location = new System.Drawing.Point(458, 126);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(112, 42);
@@ -217,7 +217,7 @@ namespace WindowsFormsDll
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(459, 153);
+            this.button8.Location = new System.Drawing.Point(458, 192);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(112, 59);
@@ -250,6 +250,7 @@ namespace WindowsFormsDll
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WorkWithArduinoForm";
             this.Text = "DatabaseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize) (this.timer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

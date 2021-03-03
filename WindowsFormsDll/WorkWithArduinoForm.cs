@@ -43,11 +43,11 @@ namespace WindowsFormsDll
 
         private void button4_Click(object sender, EventArgs e)
         {
-            textBox4.Clear();
+            textBox1.Clear();
             foreach (var i in _dbClass.selectLastFive())
             {
-                textBox4.AppendText(i);
-                textBox4.AppendText(Environment.NewLine);
+                textBox1.AppendText(i);
+                textBox1.AppendText(Environment.NewLine);
             }
             
         }
@@ -59,7 +59,6 @@ namespace WindowsFormsDll
         
         private void timer1_Elapsed(object sender, ElapsedEventArgs e)
         {
-            //string a = _comPort.getData();
             string[] b = {"Data", "test"};
             string[] a = _comPort.Split(_comPort.getData());
             _dbClass.Insert(a, b);
