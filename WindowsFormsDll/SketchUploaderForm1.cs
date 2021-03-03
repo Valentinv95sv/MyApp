@@ -33,7 +33,7 @@ namespace WindowsFormsDll
             {
                 if (_uploader.getPorts().Length == 1)
                 {
-                    comboBox1.Text = _uploader.getPorts()[0];
+                    comboBox2.Text = _uploader.getPorts()[0];
                 }
 
                 foreach (var i in _uploader.getPorts())

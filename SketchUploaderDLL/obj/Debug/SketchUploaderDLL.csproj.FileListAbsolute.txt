@@ -24,5 +24,3 @@ C:\Users\balamut\RiderProjects\MyApp\SketchUploaderDLL\obj\Debug\SketchUploaderD
 C:\Users\balamut\RiderProjects\MyApp\SketchUploaderDLL\obj\Debug\SketchUploaderDLL.csproj.CopyComplete
 C:\Users\balamut\RiderProjects\MyApp\SketchUploaderDLL\obj\Debug\SketchUploaderDLL.dll
 C:\Users\balamut\RiderProjects\MyApp\SketchUploaderDLL\obj\Debug\SketchUploaderDLL.pdb
-C:\Users\balamut\RiderProjects\MyApp\SketchUploaderDLL\obj\Debug\SketchUploaderDLL.SketchUploaderForm.resources
-C:\Users\balamut\RiderProjects\MyApp\SketchUploaderDLL\obj\Debug\SketchUploaderDLL.csproj.GenerateResource.cache

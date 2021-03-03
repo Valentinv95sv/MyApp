@@ -23,9 +23,9 @@ namespace DatabaseDLL
             {
                 _connection = new MySqlConnection(connectionString);
                 MessageBox.Show("connected");
-                if (OpenConnection())
+                if (this.OpenConnection())
                 {
-                    CloseConnection();
+                    this.CloseConnection();
                 }
             }
             catch (Exception ex)
@@ -98,7 +98,7 @@ namespace DatabaseDLL
        public List<string> selectLastFive()
        {
            List<string> list = new List<string>();
-           list = Select();
+           list = this.Select();
            list = Enumerable.Reverse(list).Take(5).Reverse().ToList();
            return list;
        }       

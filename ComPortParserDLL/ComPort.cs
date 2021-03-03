@@ -63,7 +63,7 @@ namespace ComPortParserDLL
 
         public string getData()
         {
-            return myport.ReadExisting();
+            return myport.ReadExisting().ToString();
         }
     }
 }

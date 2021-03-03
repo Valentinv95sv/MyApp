@@ -4,6 +4,7 @@ using System.Timers;
 using System.Windows.Forms;
 using ComPortParserDLL;
 using DatabaseDLL;
+using ComPortParserDLL;
 
 namespace WindowsFormsDll
 {
@@ -12,10 +13,15 @@ namespace WindowsFormsDll
         private DbClass _dbClass;
         private ComPort comport;
         private static System.Timers.Timer _timer;
+        private ComPort _comPort;
         
         public WorkWithArduinoForm()
         {
             InitializeComponent();
+            _dbClass = new DbClass();
+            _timer = new System.Timers.Timer(1000);
+            _timer.Elapsed += timer1_Elapsed;
+            _comPort = new ComPort("COM4", 9600);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,6 +49,7 @@ namespace WindowsFormsDll
                 textBox4.AppendText(i);
                 textBox4.AppendText(Environment.NewLine);
             }
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -52,21 +59,21 @@ namespace WindowsFormsDll
         
         private void timer1_Elapsed(object sender, ElapsedEventArgs e)
         {
-            string a = "asd";//_dbClass.dataFromArduino();
+            string a = _comPort.getData();
             _dbClass.Insert(a);
             textBox4.AppendText(a);
             textBox4.AppendText(Environment.NewLine);
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {
-            _dbClass.OpenConnection();
+        {   
+            _comPort.ConnectToArduino();
             _timer.Enabled = true;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            _dbClass.CloseConnection();
+            _comPort.DisconnectFromArduino();
             _timer.Enabled = false;
         }
 

@@ -9,14 +9,13 @@ namespace MyApp
 {
     public partial class Form1 : Form
     {
-        private DatabaseForm dbform;
         private SketchUploaderForm1 _uploaderForm;
-        private DatabaseForm dbForm;
+        private WorkWithArduinoForm dbform;
         public Form1()
         {
             InitializeComponent();
             _uploaderForm = new SketchUploaderForm1();
-            dbform = new DatabaseForm();
+            dbform = new WorkWithArduinoForm();
         }
         private void button1_Click(object sender, EventArgs e)
         {

@@ -122,19 +122,10 @@
         <Compile Include="StarWindowForm.Designer.cs">
             <DependentUpon>StarWindowForm.cs</DependentUpon>
         </Compile>
-        <Compile Include="SketchUploadWindowForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="SketchUploadWindowForm.Designer.cs">
-          <DependentUpon>SketchUploadWindowForm.cs</DependentUpon>
-        </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <EmbeddedResource Include="StarWindowForm.resx">
           <DependentUpon>StarWindowForm.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="SketchUploadWindowForm.resx">
-          <DependentUpon>SketchUploadWindowForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
