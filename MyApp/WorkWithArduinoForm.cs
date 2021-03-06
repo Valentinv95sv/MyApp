@@ -4,25 +4,45 @@ using System.Timers;
 using System.Windows.Forms;
 using ComPortParserDLL;
 using DatabaseDLL;
-using ComPortParserDLL;
+using SketchUploaderDLL;
 
 namespace WindowsFormsDll
 {
     public partial class WorkWithArduinoForm : Form
     {
         private DbClass _dbClass;
-        private ComPort comport;
-        private static System.Timers.Timer _timer;
         private ComPort _comPort;
-        
+        private uploaderClass _uploader= new uploaderClass();
+
         public WorkWithArduinoForm()
         {
             InitializeComponent();
+            Init();
             _dbClass = new DbClass();
-            _timer = new System.Timers.Timer(1000);
-            _timer.Elapsed += timer1_Elapsed;
-            _comPort = new ComPort("COM4", 9600);
+            _comPort = new ComPort(comboBox1.Text , 9600);
+            _comPort.timer_inint(timer1_Elapsed);
         }
+        
+        public void Init()
+        {
+            try
+            {
+                if (_uploader.getPorts().Length == 1)
+                {
+                    comboBox1.Text = _uploader.getPorts()[0];
+                }
+
+                foreach (var i in _uploader.getPorts())
+                {
+                    comboBox1.Items.Add(i);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -69,13 +89,11 @@ namespace WindowsFormsDll
         private void button3_Click(object sender, EventArgs e)
         {   
             _comPort.ConnectToArduino();
-            _timer.Enabled = true;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             _comPort.DisconnectFromArduino();
-            _timer.Enabled = false;
         }
 
         private void button6_Click(object sender, EventArgs e)

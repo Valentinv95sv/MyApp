@@ -126,7 +126,6 @@ namespace DatabaseDLL
             query = query.Remove(query.Length - 1);
             query += ")";
             
-            //string query = "INSERT INTO mytable (" + table[0] + "," + table[1] + " ) VALUES (" + i[0] + "," + i[1] + ")";
             if (this.OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, _connection);
@@ -134,10 +133,7 @@ namespace DatabaseDLL
                 this.CloseConnection();
             }
         }
-        
-        
-        
-        
+
         public void Update()
         {
             string query = "UPDATE mytable SET test = 'hello' WHERE test = '32'";
@@ -158,9 +154,7 @@ namespace DatabaseDLL
                 this.CloseConnection();
             }
         }
-        
-        
-        
+
         public int Count()
         {
             string query = "SELECT Count(*) FROM mytable";

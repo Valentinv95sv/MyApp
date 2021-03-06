@@ -112,25 +112,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Class1.cs" />
-        <Compile Include="DiagrammsForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="DiagrammsForm.Designer.cs">
-          <DependentUpon>DiagrammsForm.cs</DependentUpon>
-        </Compile>
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="SketchUploaderForm1.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="SketchUploaderForm1.Designer.cs">
-          <DependentUpon>SketchUploaderForm1.cs</DependentUpon>
-        </Compile>
-        <Compile Include="WorkWithArduinoForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="WorkWithArduinoForm.Designer.cs">
-          <DependentUpon>WorkWithArduinoForm.cs</DependentUpon>
-        </Compile>
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\ComPortParserDLL\ComPortParserDLL.csproj">
@@ -145,17 +127,6 @@
         <Project>{707dcb9d-953a-4967-bc54-0abed3a5ebe6}</Project>
         <Name>SketchUploaderDLL</Name>
       </ProjectReference>
-    </ItemGroup>
-    <ItemGroup>
-      <EmbeddedResource Include="DiagrammsForm.resx">
-        <DependentUpon>DiagrammsForm.cs</DependentUpon>
-      </EmbeddedResource>
-      <EmbeddedResource Include="SketchUploaderForm1.resx">
-        <DependentUpon>SketchUploaderForm1.cs</DependentUpon>
-      </EmbeddedResource>
-      <EmbeddedResource Include="WorkWithArduinoForm.resx">
-        <DependentUpon>WorkWithArduinoForm.cs</DependentUpon>
-      </EmbeddedResource>
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />

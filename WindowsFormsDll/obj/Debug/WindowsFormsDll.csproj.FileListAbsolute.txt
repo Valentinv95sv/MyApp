@@ -60,11 +60,7 @@ C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\bin\Debug\SketchUploaderDLL
 C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\bin\Debug\RJCP.SerialPortStream.pdb
 C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\bin\Debug\RJCP.SerialPortStream.xml
 C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\obj\Debug\WindowsFormsDll.csprojAssemblyReference.cache
-C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\obj\Debug\WindowsFormsDll.SketchUploaderForm1.resources
-C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\obj\Debug\WindowsFormsDll.csproj.GenerateResource.cache
 C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\obj\Debug\WindowsFormsDll.csproj.CoreCompileInputs.cache
 C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\obj\Debug\WindowsFormsDll.csproj.CopyComplete
 C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\obj\Debug\WindowsFormsDll.dll
 C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\obj\Debug\WindowsFormsDll.pdb
-C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\obj\Debug\WindowsFormsDll.DiagrammsForm.resources
-C:\Users\balamut\RiderProjects\MyApp\WindowsFormsDll\obj\Debug\WindowsFormsDll.WorkWithArduinoForm.resources
