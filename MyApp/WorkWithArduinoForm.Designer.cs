@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace WindowsFormsDll
+namespace MyApp
 {
     partial class WorkWithArduinoForm
     {
@@ -50,6 +50,8 @@ namespace WindowsFormsDll
             this.button8 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize) (this.timer1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -230,7 +232,7 @@ namespace WindowsFormsDll
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(5, 54);
+            this.label5.Location = new System.Drawing.Point(5, 79);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 46);
             this.label5.TabIndex = 21;
@@ -240,16 +242,34 @@ namespace WindowsFormsDll
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(94, 68);
+            this.comboBox1.Location = new System.Drawing.Point(94, 93);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(158, 21);
             this.comboBox1.TabIndex = 22;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(94, 67);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(158, 20);
+            this.textBox5.TabIndex = 23;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(5, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 17);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Название БД";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // WorkWithArduinoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 500);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button8);
@@ -276,6 +296,9 @@ namespace WindowsFormsDll
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox5;
 
         private System.Windows.Forms.ComboBox comboBox1;
 

@@ -6,7 +6,7 @@ using ComPortParserDLL;
 using DatabaseDLL;
 using SketchUploaderDLL;
 
-namespace WindowsFormsDll
+namespace MyApp
 {
     public partial class WorkWithArduinoForm : Form
     {
@@ -47,7 +47,7 @@ namespace WindowsFormsDll
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _dbClass.Connect(textBox2.Text.ToString(), textBox3.Text.ToString(), "MyDb");
+            _dbClass.Connect(textBox2.Text, textBox3.Text, textBox5.Text);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -80,12 +80,15 @@ namespace WindowsFormsDll
         
         private void timer1_Elapsed(object sender, ElapsedEventArgs e)
         {
-            //string[] b = {"Data", "test"};
-            string[] b = {"C1", "C2", "C3" };
             string[] a = _comPort.Split(_comPort.getData());
-            _dbClass.Insert(a, b);
-            //textBox4.AppendText(a[0] + " | " + a[1]);
-            textBox4.AppendText(a[0] + " | " + a[1] + " | " + a[2]);
+            string b = null;
+            _dbClass.Insert(a, ColumnName);
+            foreach (var i in a)
+            {
+                b += i + " | ";
+            }
+            textBox4.AppendText(b);
+            b = null;
             textBox4.AppendText(Environment.NewLine);
         }
 

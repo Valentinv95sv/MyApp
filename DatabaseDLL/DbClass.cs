@@ -132,6 +132,7 @@ namespace DatabaseDLL
                 }
 
             query = query.Remove(query.Length - 1);
+            
             query += ")";
             
             if (this.OpenConnection() == true)

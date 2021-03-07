@@ -82,5 +82,6 @@ namespace ComPortParserDLL
             string[] a = list.Split(separator, StringSplitOptions.RemoveEmptyEntries);
             return a;
         }
+        
     }
 }
