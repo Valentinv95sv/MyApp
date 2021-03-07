@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Drawing;
 using System.IO.Ports;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using System.Timers;
 
 
 namespace ComPortParserDLL

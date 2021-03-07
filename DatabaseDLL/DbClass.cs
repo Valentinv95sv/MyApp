@@ -11,13 +11,15 @@ namespace DatabaseDLL
     {
         private MySqlConnection _connection;
         private string message;
-        private SerialPort port;
-     
-    
-        public void Connect(string username, string password)
+
+        public void Connect(string username, string password, string Database)
         {
-            string connectionString = "SERVER=" + "localhost" + ";" + "DATABASE=" + "arduinodatabase" + ";" +
+            //string connectionString = "SERVER=" + "localhost" + ";" + "DATABASE=" + "arduinodatabase" + ";" +
+                                      //"UID=" + username + ";" + "PASSWORD=" + password + ";";
+                                      
+            string connectionString = "SERVER=" + "localhost" + ";" + "DATABASE=" + Database + ";" +
                                       "UID=" + username + ";" + "PASSWORD=" + password + ";";
+            
             
             try
             {
@@ -71,10 +73,11 @@ namespace DatabaseDLL
         }
 
         
-       public List<string> Select()
+       public List<string> Select(string[] ColumNames)
         {
             string query = "SELECT * FROM mytable";
             List<string> list = new List<string>();
+            string mystring = null;
 
             if (this.OpenConnection() == true)
             {
@@ -83,7 +86,12 @@ namespace DatabaseDLL
 
                 while (dataReader.Read())
                 {
-                    list.Add(dataReader["Data"] + "  |   " + dataReader["test"]);
+                    foreach (var i in ColumNames)
+                    {
+                        mystring += dataReader[i.ToString()] + " | ";
+                    }
+                    list.Add(mystring);
+                    mystring = null;
                 }
                 dataReader.Close();
                 this.CloseConnection();
@@ -95,10 +103,10 @@ namespace DatabaseDLL
             }
         }
        
-       public List<string> selectLastFive()
+       public List<string> selectLastFive(string[] ColumName)
        {
            List<string> list = new List<string>();
-           list = this.Select();
+           list = this.Select(ColumName);
            list = Enumerable.Reverse(list).Take(5).Reverse().ToList();
            return list;
        }       
