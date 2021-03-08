@@ -13,7 +13,8 @@ namespace MyApp
         private DbClass _dbClass;
         private ComPort _comPort;
         private uploaderClass _uploader= new uploaderClass();
-        private string[] ColumnName = {"C1", "C2", "C3"};
+        //private string[] ColumnName = {"C1", "C2", "C3"};
+        string[] separator = {"/", ",", ";"};
 
         public WorkWithArduinoForm()
         {
@@ -54,7 +55,7 @@ namespace MyApp
         {
             textBox1.Clear();
             List<string> list = new List<string>();
-            list = _dbClass.Select(ColumnName);
+            list = _dbClass.Select(_comPort.Split(textBox7.Text), textBox6.Text);
             foreach (var i in list)
             {
                 textBox1.AppendText(i);
@@ -65,12 +66,11 @@ namespace MyApp
         private void button4_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
-            foreach (var i in _dbClass.selectLastFive(ColumnName))
+            foreach (var i in _dbClass.selectLastFive(_comPort.Split(textBox7.Text), textBox6.Text))
             {
                 textBox1.AppendText(i);
                 textBox1.AppendText(Environment.NewLine);
             }
-            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -81,8 +81,9 @@ namespace MyApp
         private void timer1_Elapsed(object sender, ElapsedEventArgs e)
         {
             string[] a = _comPort.Split(_comPort.getData());
+            
             string b = null;
-            _dbClass.Insert(a, ColumnName);
+            _dbClass.Insert(a, _comPort.Split(textBox7.Text));
             foreach (var i in a)
             {
                 b += i + " | ";
@@ -112,6 +113,5 @@ namespace MyApp
         {
             _dbClass.deleteAll();
         }
-        
     }
 }

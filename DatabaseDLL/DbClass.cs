@@ -73,9 +73,9 @@ namespace DatabaseDLL
         }
 
         
-       public List<string> Select(string[] ColumNames)
+       public List<string> Select(string[] ColumNames, string table)
         {
-            string query = "SELECT * FROM mytable";
+            string query = "SELECT * FROM " + table;
             List<string> list = new List<string>();
             string mystring = null;
 
@@ -103,10 +103,10 @@ namespace DatabaseDLL
             }
         }
        
-       public List<string> selectLastFive(string[] ColumName)
+       public List<string> selectLastFive(string[] ColumName, string table)
        {
            List<string> list = new List<string>();
-           list = this.Select(ColumName);
+           list = this.Select(ColumName, table);
            list = Enumerable.Reverse(list).Take(5).Reverse().ToList();
            return list;
        }       

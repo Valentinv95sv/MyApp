@@ -49,9 +49,13 @@ namespace MyApp
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize) (this.timer1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,10 +71,10 @@ namespace MyApp
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(49, 40);
+            this.label3.Location = new System.Drawing.Point(44, 40);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 14);
+            this.label3.Size = new System.Drawing.Size(44, 14);
             this.label3.TabIndex = 2;
             this.label3.Text = "пароль";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -95,7 +99,7 @@ namespace MyApp
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(314, 14);
+            this.button1.Location = new System.Drawing.Point(556, 17);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 40);
@@ -106,7 +110,7 @@ namespace MyApp
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(22, 423);
+            this.button2.Location = new System.Drawing.Point(19, 496);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 57);
@@ -120,7 +124,7 @@ namespace MyApp
             this.textBox1.AcceptsReturn = true;
             this.textBox1.AcceptsTab = true;
             this.textBox1.AllowDrop = true;
-            this.textBox1.Location = new System.Drawing.Point(29, 169);
+            this.textBox1.Location = new System.Drawing.Point(26, 245);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -130,7 +134,7 @@ namespace MyApp
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(256, 169);
+            this.textBox4.Location = new System.Drawing.Point(253, 245);
             this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
@@ -140,7 +144,7 @@ namespace MyApp
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(162, 423);
+            this.button3.Location = new System.Drawing.Point(159, 496);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(122, 57);
@@ -151,7 +155,7 @@ namespace MyApp
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(452, 423);
+            this.button4.Location = new System.Drawing.Point(449, 496);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(112, 57);
@@ -162,7 +166,7 @@ namespace MyApp
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(452, 333);
+            this.button5.Location = new System.Drawing.Point(449, 409);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -179,7 +183,7 @@ namespace MyApp
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(314, 423);
+            this.button7.Location = new System.Drawing.Point(311, 496);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(94, 57);
@@ -190,7 +194,7 @@ namespace MyApp
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(256, 127);
+            this.label1.Location = new System.Drawing.Point(253, 203);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 27);
@@ -200,7 +204,7 @@ namespace MyApp
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(29, 126);
+            this.label4.Location = new System.Drawing.Point(26, 202);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 28);
@@ -210,7 +214,7 @@ namespace MyApp
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(452, 188);
+            this.button6.Location = new System.Drawing.Point(449, 264);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(112, 42);
@@ -221,7 +225,7 @@ namespace MyApp
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(452, 254);
+            this.button8.Location = new System.Drawing.Point(449, 330);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(112, 59);
@@ -232,45 +236,81 @@ namespace MyApp
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(5, 79);
+            this.label5.Location = new System.Drawing.Point(274, 66);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 46);
             this.label5.TabIndex = 21;
             this.label5.Text = "номер Com порта";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(94, 93);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(158, 21);
-            this.comboBox1.TabIndex = 22;
-            // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(94, 67);
+            this.textBox5.Location = new System.Drawing.Point(364, 12);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(158, 20);
             this.textBox5.TabIndex = 23;
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(5, 68);
+            this.label6.Location = new System.Drawing.Point(275, 13);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 17);
             this.label6.TabIndex = 24;
             this.label6.Text = "Название БД";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(94, 63);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(158, 20);
+            this.textBox6.TabIndex = 25;
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(12, 56);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 32);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Имя таблицы БД";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(364, 43);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(157, 20);
+            this.textBox7.TabIndex = 27;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(258, 33);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 39);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Название колонок таблицы";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(363, 80);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(158, 21);
+            this.comboBox1.TabIndex = 29;
+            // 
             // WorkWithArduinoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 500);
+            this.ClientSize = new System.Drawing.Size(718, 639);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button6);
@@ -297,10 +337,16 @@ namespace MyApp
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.ComboBox comboBox1;
+
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox7;
+
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox6;
+
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
-
-        private System.Windows.Forms.ComboBox comboBox1;
 
         private System.Windows.Forms.Label label5;
 
