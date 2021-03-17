@@ -1,0 +1,8 @@
+C:\Users\balamut\RiderProjects\MyApp\DatabaseDLL\bin\Release\DatabaseDLL.dll
+C:\Users\balamut\RiderProjects\MyApp\DatabaseDLL\bin\Release\DatabaseDLL.pdb
+C:\Users\balamut\RiderProjects\MyApp\DatabaseDLL\bin\Release\MySql.Data.dll
+C:\Users\balamut\RiderProjects\MyApp\DatabaseDLL\obj\Release\DatabaseDLL.csprojAssemblyReference.cache
+C:\Users\balamut\RiderProjects\MyApp\DatabaseDLL\obj\Release\DatabaseDLL.csproj.CoreCompileInputs.cache
+C:\Users\balamut\RiderProjects\MyApp\DatabaseDLL\obj\Release\DatabaseDLL.csproj.CopyComplete
+C:\Users\balamut\RiderProjects\MyApp\DatabaseDLL\obj\Release\DatabaseDLL.dll
+C:\Users\balamut\RiderProjects\MyApp\DatabaseDLL\obj\Release\DatabaseDLL.pdb

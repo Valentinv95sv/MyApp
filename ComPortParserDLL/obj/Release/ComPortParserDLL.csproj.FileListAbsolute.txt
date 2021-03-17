@@ -1,0 +1,6 @@
+C:\Users\balamut\RiderProjects\MyApp\ComPortParserDLL\bin\Release\ComPortParserDLL.dll
+C:\Users\balamut\RiderProjects\MyApp\ComPortParserDLL\bin\Release\ComPortParserDLL.pdb
+C:\Users\balamut\RiderProjects\MyApp\ComPortParserDLL\obj\Release\ComPortParserDLL.csprojAssemblyReference.cache
+C:\Users\balamut\RiderProjects\MyApp\ComPortParserDLL\obj\Release\ComPortParserDLL.csproj.CoreCompileInputs.cache
+C:\Users\balamut\RiderProjects\MyApp\ComPortParserDLL\obj\Release\ComPortParserDLL.dll
+C:\Users\balamut\RiderProjects\MyApp\ComPortParserDLL\obj\Release\ComPortParserDLL.pdb
