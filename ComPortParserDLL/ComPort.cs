@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO.Ports;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 
@@ -11,7 +10,6 @@ namespace ComPortParserDLL
         Boolean isConnected;
         private string port { get; set; }
         private int baudrate { get; set; }
-        private string message;
         SerialPort myport = new SerialPort();
         private static System.Timers.Timer _timer;
 
@@ -48,11 +46,10 @@ namespace ComPortParserDLL
                 myport.BaudRate = baudrate;
                 myport.Open();
                 _timer.Enabled = true;
-                message = "connectes";
             }
             catch (Exception ex)
             {
-                message = ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -63,11 +60,10 @@ namespace ComPortParserDLL
                 isConnected = false;
                 myport.Close();
                 _timer.Enabled = false;
-                message = "disconnect";
             }
             catch (Exception ex)
             {
-                message = ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -75,6 +71,22 @@ namespace ComPortParserDLL
         {
             return myport.ReadExisting();
         }
+
+        public void Write(string income)
+        {
+            myport.Write(income);
+        }
+
+        public void InBuffClear()
+        {
+            myport.DiscardInBuffer();
+        }
+
+        public void OutBuffClear()
+        {
+            myport.DiscardOutBuffer();
+        }     
+        
 
         public string[] Split(string list)
         {

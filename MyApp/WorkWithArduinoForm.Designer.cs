@@ -56,6 +56,8 @@ namespace MyApp
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.timer1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -299,11 +301,33 @@ namespace MyApp
             this.comboBox1.Size = new System.Drawing.Size(158, 21);
             this.comboBox1.TabIndex = 29;
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(608, 459);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(83, 56);
+            this.button9.TabIndex = 30;
+            this.button9.Text = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(613, 534);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(77, 53);
+            this.button10.TabIndex = 31;
+            this.button10.Text = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // WorkWithArduinoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(718, 639);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox7);
@@ -336,6 +360,10 @@ namespace MyApp
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button button10;
+
+        private System.Windows.Forms.Button button9;
 
         private System.Windows.Forms.ComboBox comboBox1;
 

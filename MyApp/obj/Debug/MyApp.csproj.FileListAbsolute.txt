@@ -83,3 +83,6 @@ C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Debug\WindowsFormsDll.dll
 C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Debug\WindowsFormsDll.pdb
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Debug\WindowsFormsDll.SketchUploaderForm1.resources
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Debug\MyApp.WorkWithArduinoForm.resources
+C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Debug\MyApp.TestForm1.resources
+C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Debug\MyApp.DiagrammForm1.resources
+C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Debug\SrpUxSnapIn.dll
