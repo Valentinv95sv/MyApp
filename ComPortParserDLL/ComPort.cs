@@ -76,7 +76,8 @@ namespace ComPortParserDLL
         {
             myport.Write(income);
         }
-
+        
+        
         public void InBuffClear()
         {
             myport.DiscardInBuffer();
@@ -92,6 +93,48 @@ namespace ComPortParserDLL
         {
             string[] separator = {"/", ",", ";"};
             string[] a = list.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+            return a;
+        }
+
+        //деление входящей строки по датчикам
+        public string[]  DataDetection(string income)
+        {
+            //example string
+            string example= "13%/24.3 град/ 1002 свет/ 0.1 ДБ";
+            
+            string[] Meteodata = new string[2];
+            string LightData = "";
+            string SoundData = "";
+
+            string[] separator = {"/", ",", ";"};
+            //string income = myport.ReadExisting(); 
+            //string[] query = income.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+            string[] query = example.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (var i in query)
+            {
+                if(i.Contains("град"))
+                {
+                    Meteodata[0] = i;
+                }
+
+                if (i.Contains("%"))
+                {
+                    Meteodata[1] = i;
+                }
+
+                if (i.Contains("свет"))
+                {
+                    LightData = i;
+                }
+
+                if (i.Contains("ДБ"))
+                {
+                    SoundData = i;
+                }
+            }
+
+            string[] a = new[] {Meteodata[0], Meteodata[1], LightData, SoundData };
             return a;
         }
         

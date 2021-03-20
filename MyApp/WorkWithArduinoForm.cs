@@ -151,5 +151,21 @@ namespace MyApp
         {
             _dbClass.DeleteTable("new2");
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            
+            _comPort.Write(textBox5.Text);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            _comPort.DisconnectFromArduino();
+        }
+
+        private void button12_Click_1(object sender, EventArgs e)
+        {
+            _comPort.DataDetection(_comPort.getData());
+        }
     }
 }

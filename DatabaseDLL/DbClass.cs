@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
@@ -102,12 +103,14 @@ namespace DatabaseDLL
         //создать таблтцу с полями
         public void CreateTable(string TableName, string[] columns)
         {
+            this.CloseConnection();
+            
             //создание таблицы со столбцами
             string query = String.Format("CREATE TABLE {0} (", TableName);
             foreach (var i in columns)
             {
                 string[] a = i.Split(':');
-                query += String.Format("{0} {1} DEFAULT '#####',", a[0], a[1]);
+                query += String.Format("{0} {1} DEFAULT NULL,", a[0], a[1]);
             }
             query = query.Remove(query.Length - 1);
             query += ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;";
@@ -116,14 +119,13 @@ namespace DatabaseDLL
             string query2 = String.Format("INSERT INTO TABLE {0} ", TableName);
             foreach (var i in columns)
             {
-                query += String.Format("{0}, ", i.Split(':')[0]);
+                query2 += String.Format("{0}, ", i.Split(':')[0]);
             }
-            query.Remove(query.Length - 1);
+            query2.Remove(query2.Length - 1);
             
             if (this.OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, _connection);
-                cmd.ExecuteNonQuery();
                 cmd.ExecuteNonQuery();
                 this.CloseConnection();
             }
@@ -132,6 +134,7 @@ namespace DatabaseDLL
         //удалить таблицу
         public void DeleteTable(string TableName)
         {
+            this.CloseConnection();
             string query = String.Format("DROP TABLE IF EXISTS {0}", TableName);
 
             if (OpenConnection() == true)
@@ -228,6 +231,12 @@ namespace DatabaseDLL
             }
         }
 
+        public void InsertInColumns(string TableName, string[] data, string columns)
+        {
+            string query = String.Format("INSERT INTO {0} ()", TableName);
+            
+        }
+        
         public void Update()
         {
             string query = "UPDATE mytable SET test = 'hello' WHERE test = '32'";
