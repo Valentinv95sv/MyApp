@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Timers;
 using System.Windows.Forms;
 using ComPortParserDLL;
@@ -13,8 +14,7 @@ namespace MyApp
         private DbClass _dbClass;
         private ComPort _comPort;
         private uploaderClass _uploader= new uploaderClass();
-        //private string[] ColumnName = {"C1", "C2", "C3"};
-
+        
         public WorkWithArduinoForm()
         {
             InitializeComponent();
@@ -43,11 +43,9 @@ namespace MyApp
                 MessageBox.Show(ex.Message);
             }
         }
-        
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //_dbClass.Connect(textBox2.Text, textBox3.Text, textBox5.Text);
             _dbClass.Connect("admin", "1234", "mydatabase");
         }
 
@@ -88,21 +86,7 @@ namespace MyApp
                      textBox1.AppendText(Environment.NewLine);
                  }
              }
-
-            
-            
-            
-            
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            _dbClass.DeleteDB("new");
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            _dbClass.CreateDB("new");  
+             
         }
         
         private void timer1_Elapsed(object sender, ElapsedEventArgs e)
@@ -143,13 +127,17 @@ namespace MyApp
 
         private void button9_Click(object sender, EventArgs e)
         {
-            string[] a = new string[] {"C1:varchar(100)", "C2:varchar(100)", "C3:INT" };
-            _dbClass.CreateTable("new2" , a);
+            string[] a = {"C1:varchar(100)", "C2:varchar(100)", "C3:varchar(100)", "C4:varchar(100)" };
+            if (_dbClass.CreateTable("new2", a))
+            {
+                button9.BackColor = Color.Chartreuse;
+            }
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             _dbClass.DeleteTable("new2");
+            button9.BackColor = Color.LightGray;
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -166,6 +154,16 @@ namespace MyApp
         private void button12_Click_1(object sender, EventArgs e)
         {
             _comPort.DataDetection(_comPort.getData());
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            _dbClass.CreateDB("new3");
         }
     }
 }

@@ -89,6 +89,7 @@ namespace DatabaseDLL
         //удалить БД
         public void DeleteDB(string DBName)
         {
+            this.CloseConnection();
             string query = String.Format("DROP DATABASE IF EXISTS {0}", DBName);
 
             if (this.OpenConnection() == true)
@@ -101,7 +102,7 @@ namespace DatabaseDLL
         }
         
         //создать таблтцу с полями
-        public void CreateTable(string TableName, string[] columns)
+        public Boolean CreateTable(string TableName, string[] columns)
         {
             this.CloseConnection();
             
@@ -113,24 +114,78 @@ namespace DatabaseDLL
                 query += String.Format("{0} {1} DEFAULT NULL,", a[0], a[1]);
             }
             query = query.Remove(query.Length - 1);
-            query += ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;";
+            query += ")";  // ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;";
             
             //вставка значения ##### в первую ячейку каждого столбца
-            string query2 = String.Format("INSERT INTO TABLE {0} ", TableName);
+            string query2 = String.Format("INSERT INTO {0} (", TableName);
             foreach (var i in columns)
             {
-                query2 += String.Format("{0}, ", i.Split(':')[0]);
+                query2 += String.Format("{0},", i.Split(':')[0]);
             }
-            query2.Remove(query2.Length - 1);
+            query2 = query2.Remove(query2.Length - 1);
+            query2 += ") VALUES (";
+            foreach (var i in columns)
+            {
+                query2 += "'#####',";
+            }
+            query2 = query2.Remove(query2.Length - 1);
+            query2 += ")";
+            
+            //проверка на правильность создания
+            string query3 = "SELECT * FROM " + TableName;
+            string[] b = new string[columns.Length];
+            for (int i = 0; i < columns.Length - 1; i++)
+            {
+                b[i] = columns[i].Split(':')[0];
+            }
+            string[] z = new string[b.Length];
+            
+            Boolean check = false;
             
             if (this.OpenConnection() == true)
             {
-                MySqlCommand cmd = new MySqlCommand(query, _connection);
+                var cmd = new MySqlCommand();
+                cmd.Connection = _connection;
+                cmd.CommandText = query;
                 cmd.ExecuteNonQuery();
+                cmd.CommandText = query2;
+                cmd.ExecuteNonQuery();
+                
+                MySqlCommand cmd2 = new MySqlCommand(query3, _connection);
+                MySqlDataReader reader = cmd2.ExecuteReader();
+                
+                while (reader.Read())
+                {
+                    for (int i = 0; i < columns.Length; i++)
+                    {
+                        string a = reader.GetValue(i).ToString();
+                        z[i] = a;
+                    }
+
+                }
+                reader.Close();
+                foreach (var i in z)
+                {
+                    if (i == "#####")
+                    {
+                        check = true;
+                    }
+                    else
+                    {
+                        check = false;
+                    }
+                }
+
+                string query4 = String.Format("TRUNCATE TABLE {0}", TableName);
+                cmd.CommandText = query4;
+                cmd.ExecuteNonQuery();
+                
                 this.CloseConnection();
             }
+            
+            return check;
         }
-        
+
         //удалить таблицу
         public void DeleteTable(string TableName)
         {
@@ -235,35 +290,6 @@ namespace DatabaseDLL
         {
             string query = String.Format("INSERT INTO {0} ()", TableName);
             
-        }
-        
-        public void Update()
-        {
-            string query = "UPDATE mytable SET test = 'hello' WHERE test = '32'";
-            if (this.OpenConnection() == true)
-            {
-                MySqlCommand cmd = new MySqlCommand(query, _connection);
-                cmd.ExecuteNonQuery();
-                this.CloseConnection();
-            }
-        }
-        
-        public int Count()
-        {
-            string query = "SELECT Count(*) FROM mytable";
-            int Count = -1;
-
-            if (this.OpenConnection() == true)
-            {
-                MySqlCommand cmd = new MySqlCommand(query, _connection);
-                Count = int.Parse(cmd.ExecuteScalar() + "");
-                this.CloseConnection();
-                return Count;
-            }
-            else
-            {
-                return Count;
-            }
         }
         
         //отчистить таблицу
