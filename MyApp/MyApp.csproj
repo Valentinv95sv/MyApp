@@ -127,6 +127,12 @@
         <Reference Include="WindowsFormsIntegration" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="AllInOne.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="AllInOne.Designer.cs">
+          <DependentUpon>AllInOne.cs</DependentUpon>
+        </Compile>
         <Compile Include="DiagrammForm1.cs">
           <SubType>Form</SubType>
         </Compile>

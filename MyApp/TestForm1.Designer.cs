@@ -33,7 +33,6 @@ namespace MyApp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestForm1));
             this.dataGrid1 = new System.Windows.Forms.DataGrid();
-            this.dataGrid2 = new System.Windows.Forms.DataGrid();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -41,6 +40,7 @@ namespace MyApp
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGrid2 = new System.Windows.Forms.DataGrid();
             ((System.ComponentModel.ISupportInitialize) (this.dataGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.dataGrid2)).BeginInit();
             this.SuspendLayout();
@@ -63,20 +63,6 @@ namespace MyApp
             this.dataGrid1.PreferredRowHeight = 20;
             this.dataGrid1.Size = new System.Drawing.Size(278, 395);
             this.dataGrid1.TabIndex = 0;
-            // 
-            // dataGrid2
-            // 
-            this.dataGrid2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGrid2.CaptionBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGrid2.CaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.dataGrid2.CaptionForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGrid2.CaptionText = "Данные, полученные  с Arduino";
-            this.dataGrid2.DataMember = "";
-            this.dataGrid2.HeaderForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGrid2.Location = new System.Drawing.Point(368, 110);
-            this.dataGrid2.Name = "dataGrid2";
-            this.dataGrid2.Size = new System.Drawing.Size(278, 395);
-            this.dataGrid2.TabIndex = 1;
             // 
             // button2
             // 
@@ -160,12 +146,22 @@ namespace MyApp
             this.textBox1.Size = new System.Drawing.Size(574, 20);
             this.textBox1.TabIndex = 9;
             // 
+            // dataGrid2
+            // 
+            this.dataGrid2.DataMember = "";
+            this.dataGrid2.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataGrid2.Location = new System.Drawing.Point(379, 110);
+            this.dataGrid2.Name = "dataGrid2";
+            this.dataGrid2.Size = new System.Drawing.Size(259, 394);
+            this.dataGrid2.TabIndex = 10;
+            // 
             // TestForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1071, 558);
+            this.ClientSize = new System.Drawing.Size(1115, 573);
+            this.Controls.Add(this.dataGrid2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -173,7 +169,6 @@ namespace MyApp
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGrid2);
             this.Controls.Add(this.dataGrid1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "TestForm1";
@@ -183,6 +178,8 @@ namespace MyApp
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.DataGrid dataGrid2;
 
         private System.Windows.Forms.TextBox textBox1;
 
@@ -197,7 +194,6 @@ namespace MyApp
         private System.Windows.Forms.Button button4;
 
         private System.Windows.Forms.DataGrid dataGrid1;
-        private System.Windows.Forms.DataGrid dataGrid2;
 
         #endregion
     }

@@ -56,10 +56,23 @@ namespace WindowsFormsDll
         {
             try
             {
-                _uploader.uploadSketch(textBox1.Text.ToString(), model: _uploader.SetModel(comboBox1.Text.ToString()),
-                    comboBox2.Text.ToString(), 9600);
+                _uploader.uploadSketch(textBox1.Text, model: _uploader.SetModel(comboBox1.Text),
+                    comboBox2.Text, 9600);
                 MessageBox.Show("Sketch download proccess is successful");
                 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _uploader.uploadCheckSketch(comboBox2.Text);
+                MessageBox.Show("Sketch download proccess is successful");
             }
             catch (Exception ex)
             {

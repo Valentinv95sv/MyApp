@@ -86,8 +86,12 @@ namespace ComPortParserDLL
         public void OutBuffClear()
         {
             myport.DiscardOutBuffer();
-        }     
-        
+        }
+
+        public int BufferSize()
+        {
+            return myport.ReadBufferSize;
+        }
 
         public string[] Split(string list)
         {

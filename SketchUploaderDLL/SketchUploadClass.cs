@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.IO.Ports;
+﻿using System.IO.Ports;
 using System.Windows.Forms;
 using ArduinoUploader;
 using ArduinoUploader.Hardware;
@@ -18,6 +17,7 @@ namespace SketchUploaderDLL
         {
             
         }
+        
         public uploaderClass(string filename, string portname, ArduinoModel model)
         {
             this.filename = filename;
@@ -28,21 +28,30 @@ namespace SketchUploaderDLL
         public void uploadSketch(string Filename, ArduinoModel model, string port, int baudrate)
         {
             _uploaderClass = new uploaderClass(Filename, port, model);
-            _uploaderClass.upload();
-        }
-
-        public void upload()
-        {
             ArduinoSketchUploader uploader = new ArduinoSketchUploader(
                 new ArduinoSketchUploaderOptions()
                 {
-                    FileName = this.filename,
-                    PortName = this.portname,
-                    ArduinoModel = this.model
+                    FileName = Filename,
+                    PortName = port,
+                    ArduinoModel = model
                 });
             uploader.UploadSketch();
         }
-        
+
+        public void uploadCheckSketch(string port)
+        {
+            string filePath = "checkSktech.ino.eightanaloginputs.hex";
+            ArduinoSketchUploader uploader = new ArduinoSketchUploader(
+                new ArduinoSketchUploaderOptions()
+                {
+                    FileName = filePath,
+                    PortName = port,
+                    ArduinoModel = ArduinoModel.NanoR3
+                });
+            uploader.UploadSketch();
+            
+        }
+
         public string openfile()
         {
             using (FileDialog fbd = new OpenFileDialog())  
@@ -55,16 +64,9 @@ namespace SketchUploaderDLL
             return "Error";
         }
         
-        public List<string> getModelList()
+        public string[] getModelList()
         {
-            List<string> list = new List<string>();
-            list.Add("Leonardo");
-            list.Add("Mega1284");
-            list.Add("Mega2560");
-            list.Add("Micro");
-            list.Add("NanoR2");
-            list.Add("NanoR3");
-            list.Add("UnoR3");
+            string[] list = {"Leonardo", "Mega1284", "Mega2560", "Micro", "NanoR2", "NanoR3", "UnoR3"};
             return list;
         }
         
