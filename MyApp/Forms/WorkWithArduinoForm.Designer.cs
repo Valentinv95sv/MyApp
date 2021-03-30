@@ -33,8 +33,6 @@ namespace MyApp
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.timer1 = new System.Timers.Timer();
             this.button7 = new System.Windows.Forms.Button();
@@ -54,7 +52,10 @@ namespace MyApp
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize) (this.timer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -70,7 +71,7 @@ namespace MyApp
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(19, 496);
+            this.button2.Location = new System.Drawing.Point(23, 409);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 57);
@@ -79,32 +80,9 @@ namespace MyApp
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.AcceptsReturn = true;
-            this.textBox1.AcceptsTab = true;
-            this.textBox1.AllowDrop = true;
-            this.textBox1.Location = new System.Drawing.Point(26, 245);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(176, 221);
-            this.textBox1.TabIndex = 10;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(253, 245);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox4.Size = new System.Drawing.Size(171, 221);
-            this.textBox4.TabIndex = 11;
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(159, 496);
+            this.button3.Location = new System.Drawing.Point(163, 409);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(122, 57);
@@ -120,7 +98,7 @@ namespace MyApp
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(311, 496);
+            this.button7.Location = new System.Drawing.Point(315, 409);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(94, 57);
@@ -131,7 +109,7 @@ namespace MyApp
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(253, 203);
+            this.label1.Location = new System.Drawing.Point(236, 119);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 27);
@@ -141,7 +119,7 @@ namespace MyApp
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(26, 202);
+            this.label4.Location = new System.Drawing.Point(28, 13);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 28);
@@ -189,7 +167,7 @@ namespace MyApp
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(608, 459);
+            this.button9.Location = new System.Drawing.Point(603, 311);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(83, 56);
             this.button9.TabIndex = 30;
@@ -199,7 +177,7 @@ namespace MyApp
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(613, 534);
+            this.button10.Location = new System.Drawing.Point(608, 386);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(77, 53);
             this.button10.TabIndex = 31;
@@ -272,7 +250,7 @@ namespace MyApp
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(474, 489);
+            this.button4.Location = new System.Drawing.Point(478, 402);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(70, 63);
             this.button4.TabIndex = 35;
@@ -280,12 +258,31 @@ namespace MyApp
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(243, 148);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox4.Size = new System.Drawing.Size(171, 221);
+            this.textBox4.TabIndex = 11;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(23, 91);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(203, 277);
+            this.dataGridView1.TabIndex = 36;
+            // 
             // WorkWithArduinoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(718, 639);
+            this.ClientSize = new System.Drawing.Size(769, 655);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
@@ -305,7 +302,6 @@ namespace MyApp
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Location = new System.Drawing.Point(15, 15);
@@ -313,9 +309,14 @@ namespace MyApp
             this.Name = "WorkWithArduinoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize) (this.timer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.DataGridView dataGridView1;
+
+        private System.Windows.Forms.TextBox textBox4;
 
         private System.Windows.Forms.Button button4;
 
@@ -351,10 +352,7 @@ namespace MyApp
 
         private System.Windows.Forms.Button button3;
 
-        private System.Windows.Forms.TextBox textBox4;
-
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
 
         private System.Windows.Forms.Button button1;
 

@@ -254,7 +254,7 @@ namespace DatabaseDLL
         }
         
         //втсавить записи в таблицу
-        public void Insert(string TableName, string[] i, string[] columns)
+        public void Insert(string TableName, string[] values, string[] columns)
         {
             
             string query = String.Format("INSERT INTO {0} (", TableName);
@@ -267,7 +267,7 @@ namespace DatabaseDLL
             query = query.Remove(query.Length - 1);
             query += " ) VALUES (";
             
-            foreach (var k in i)
+            foreach (var k in values)
             {
                 string y;
                 y = String.Format("{0},", k );  

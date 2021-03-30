@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Timers;
 using System.Windows.Forms;
 using ComPortParserDLL;
@@ -47,54 +48,58 @@ namespace MyApp
         private void button1_Click(object sender, EventArgs e)
         {
             _dbClass.Connect("admin", "1234", "mydatabase");
+            
         }
+        private void getdata()
+        {
+            string[][] x = _dbClass.Select("new2");
+            dataGridView1.Columns.Add("1", "1");
+            dataGridView1.Columns.Add("2", "2");
+            dataGridView1.Columns.Add("3", "3");
+            dataGridView1.Columns.Add("4", "4");
 
+            int rows = x[0].Length;
+            int cols = x.Length;
+            string[] a = new string[cols];
+            for (int i = 0; i < rows; i++)//->
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    a[j] = x[j][i];
+                }
+                dataGridView1.Rows.Add(a);
+            }
+        }
+        
+        
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            /*List<string> list = new List<string>();
-            list = _dbClass.Select("mytable");
-            foreach (var i in list)
+            string[][] x = _dbClass.Select("new2");
+            dataGridView1.Columns.Add("1", "1");
+            dataGridView1.Columns.Add("2", "2");
+            dataGridView1.Columns.Add("3", "3");
+            dataGridView1.Columns.Add("4", "4");
+
+            int rows = x[0].Length;
+            int cols = x.Length;
+            string[] a = new string[cols];
+            for (int i = 0; i < rows; i++)//->
             {
-                textBox1.AppendText(i);
-                textBox1.AppendText(Environment.NewLine);
-            }*/
-            /*
-             foreach (var i in _dbClass.Select("mytable"))
-             {
-                 textBox1.AppendText(i);
-                 textBox1.AppendText(Environment.NewLine);
-             }*/
-
-            string[][] x = _dbClass.Select("mytable");
-            /*
-             for (int i = 0; i < x[i].Length - 1; i++)
-             {
-                 for (int j = 0; j < x[j].Length - 1; j++)
-                 {
-                     textBox1.AppendText(x[i][j] + "|");
-                     
-                 }
-                 textBox1.AppendText(Environment.NewLine);
-             }*/
-
-             foreach (var i in x)
-             {
-                 foreach (var j in i)
-                 {
-                     textBox1.AppendText(j);
-                     textBox1.AppendText(Environment.NewLine);
-                 }
-             }
-             
+                for (int j = 0; j < cols; j++)
+                {
+                    a[j] = x[j][i];
+                }
+                dataGridView1.Rows.Add(a);
+            }
         }
         
         private void timer1_Elapsed(object sender, ElapsedEventArgs e)
         {
             string[] a = _comPort.Split(_comPort.getData());
-            
+            dataGridView1.Rows.Add(a);
+            string[] c = {"C1", "C2", "C3", "C4"};
             string b = null;
-            _dbClass.Insert("mytable", a, _comPort.Split(textBox7.Text));
+            _dbClass.Insert("new2", a, c);
             foreach (var i in a)
             {
                 b += i + " | ";
@@ -116,13 +121,13 @@ namespace MyApp
 
         private void button6_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
+            
             textBox4.Clear();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            _dbClass.deleteAll("mytable");
+            _dbClass.deleteAll("new2");
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -165,5 +170,7 @@ namespace MyApp
         {
             _dbClass.CreateDB("new3");
         }
+
+        
     }
 }

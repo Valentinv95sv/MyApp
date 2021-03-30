@@ -110,6 +110,7 @@
           <HintPath>..\packages\System.Threading.ThreadPool.4.3.0\lib\net46\System.Threading.ThreadPool.dll</HintPath>
           <Private>True</Private>
         </Reference>
+        <Reference Include="System.Web" />
         <Reference Include="System.Web.DataVisualization" />
         <Reference Include="System.Windows.Forms.DataVisualization" />
         <Reference Include="System.Workflow.ComponentModel" />
@@ -133,46 +134,58 @@
         <Compile Include="AllInOne.Designer.cs">
           <DependentUpon>AllInOne.cs</DependentUpon>
         </Compile>
-        <Compile Include="DiagrammForm1.cs">
+        <Compile Include="Forms\DiagrammForm1.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="DiagrammForm1.Designer.cs">
+        <Compile Include="Forms\DiagrammForm1.Designer.cs">
           <DependentUpon>DiagrammForm1.cs</DependentUpon>
         </Compile>
-        <Compile Include="SketchUploaderForm1.cs">
+        <Compile Include="Forms\SketchUploaderForm1.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="SketchUploaderForm1.Designer.cs">
+        <Compile Include="Forms\SketchUploaderForm1.Designer.cs">
           <DependentUpon>SketchUploaderForm1.cs</DependentUpon>
         </Compile>
-        <Compile Include="StarWindowForm.cs">
-            <SubType>Form</SubType>
+        <Compile Include="Forms\StarWindowForm.cs">
+          <SubType>Form</SubType>
         </Compile>
-        <Compile Include="StarWindowForm.Designer.cs">
-            <DependentUpon>StarWindowForm.cs</DependentUpon>
+        <Compile Include="Forms\StarWindowForm.Designer.cs">
+          <DependentUpon>StarWindowForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Forms\TestForm1.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Forms\TestForm1.Designer.cs">
+          <DependentUpon>TestForm1.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Forms\WorkWithArduinoForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Forms\WorkWithArduinoForm.Designer.cs">
+          <DependentUpon>WorkWithArduinoForm.cs</DependentUpon>
         </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="TestForm1.cs">
-          <SubType>Form</SubType>
+        <Compile Include="ThemeColor.cs">
+          <DependentUpon>AllInOne.cs</DependentUpon>
         </Compile>
-        <Compile Include="TestForm1.Designer.cs">
-          <DependentUpon>TestForm1.cs</DependentUpon>
-        </Compile>
-        <Compile Include="WorkWithArduinoForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="WorkWithArduinoForm.Designer.cs">
-          <DependentUpon>WorkWithArduinoForm.cs</DependentUpon>
-        </Compile>
-        <EmbeddedResource Include="DiagrammForm1.resx">
+        <EmbeddedResource Include="AllInOne.resx">
+          <DependentUpon>AllInOne.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Forms\DiagrammForm1.resx">
           <DependentUpon>DiagrammForm1.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="SketchUploaderForm1.resx">
+        <EmbeddedResource Include="Forms\SketchUploaderForm1.resx">
           <DependentUpon>SketchUploaderForm1.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="StarWindowForm.resx">
+        <EmbeddedResource Include="Forms\StarWindowForm.resx">
           <DependentUpon>StarWindowForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Forms\TestForm1.resx">
+          <DependentUpon>TestForm1.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Forms\WorkWithArduinoForm.resx">
+          <DependentUpon>WorkWithArduinoForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
@@ -183,12 +196,6 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
-        <EmbeddedResource Include="TestForm1.resx">
-          <DependentUpon>TestForm1.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="WorkWithArduinoForm.resx">
-          <DependentUpon>WorkWithArduinoForm.cs</DependentUpon>
-        </EmbeddedResource>
         <None Include="packages.config" />
         <None Include="Properties\Settings.settings">
             <Generator>SettingsSingleFileGenerator</Generator>

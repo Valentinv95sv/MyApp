@@ -86,3 +86,4 @@ C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Debug\MyApp.WorkWithArduinoForm.r
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Debug\MyApp.TestForm1.resources
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Debug\MyApp.DiagrammForm1.resources
 C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Debug\SrpUxSnapIn.dll
+C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Debug\MyApp.AllInOne.resources

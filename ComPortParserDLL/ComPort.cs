@@ -77,7 +77,6 @@ namespace ComPortParserDLL
             myport.Write(income);
         }
         
-        
         public void InBuffClear()
         {
             myport.DiscardInBuffer();
