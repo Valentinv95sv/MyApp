@@ -70,9 +70,9 @@ namespace SketchUploaderDLL
             return list;
         }
         
-        public ArduinoModel SetModel(string myModel)
+        public ArduinoModel SetModel()
         {
-            switch (myModel)
+            /*switch (myModel)
             {
                 case "Leonardo":
                     return ArduinoModel.Leonardo;
@@ -88,7 +88,7 @@ namespace SketchUploaderDLL
                     return ArduinoModel.NanoR3;
                 case "Unor3":
                     return ArduinoModel.UnoR3;
-            }
+            }*/
             return ArduinoModel.NanoR3;
         }
 

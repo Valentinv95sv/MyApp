@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
+using MyApp;
 using SketchUploaderDLL;
 
 namespace WindowsFormsDll
@@ -13,10 +15,25 @@ namespace WindowsFormsDll
             InitializeComponent();
             Init();
         }
+        
+        private void LoadTheme()
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
+            }
+
+        }
 
         public void Init()
         {
-            try
+            /*try
             {
                 comboBox1.Text = _uploader.getModelList()[5];
                 foreach (var i in _uploader.getModelList())
@@ -27,7 +44,7 @@ namespace WindowsFormsDll
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
 
             try
             {
@@ -56,7 +73,7 @@ namespace WindowsFormsDll
         {
             try
             {
-                _uploader.uploadSketch(textBox1.Text, model: _uploader.SetModel(comboBox1.Text),
+                _uploader.uploadSketch(textBox1.Text, model: _uploader.SetModel(),
                     comboBox2.Text, 9600);
                 MessageBox.Show("Sketch download proccess is successful");
                 
@@ -79,5 +96,11 @@ namespace WindowsFormsDll
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void SketchUploaderForm1_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+        }
+        
     }
 }

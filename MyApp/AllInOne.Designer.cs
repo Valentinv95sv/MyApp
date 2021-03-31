@@ -191,7 +191,7 @@ namespace MyApp
             this.button3.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(238, 60);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Открыть порт";
+            this.button3.Text = "График средних показаний";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

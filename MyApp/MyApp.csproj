@@ -140,6 +140,12 @@
         <Compile Include="Forms\DiagrammForm1.Designer.cs">
           <DependentUpon>DiagrammForm1.cs</DependentUpon>
         </Compile>
+        <Compile Include="Forms\FirstDiagramm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Forms\FirstDiagramm.Designer.cs">
+          <DependentUpon>FirstDiagramm.cs</DependentUpon>
+        </Compile>
         <Compile Include="Forms\SketchUploaderForm1.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -152,12 +158,6 @@
         <Compile Include="Forms\StarWindowForm.Designer.cs">
           <DependentUpon>StarWindowForm.cs</DependentUpon>
         </Compile>
-        <Compile Include="Forms\TestForm1.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="Forms\TestForm1.Designer.cs">
-          <DependentUpon>TestForm1.cs</DependentUpon>
-        </Compile>
         <Compile Include="Forms\WorkWithArduinoForm.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -166,23 +166,21 @@
         </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="ThemeColor.cs">
-          <DependentUpon>AllInOne.cs</DependentUpon>
-        </Compile>
+        <Compile Include="ThemeColor.cs" />
         <EmbeddedResource Include="AllInOne.resx">
           <DependentUpon>AllInOne.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Forms\DiagrammForm1.resx">
           <DependentUpon>DiagrammForm1.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="Forms\FirstDiagramm.resx">
+          <DependentUpon>FirstDiagramm.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Forms\SketchUploaderForm1.resx">
           <DependentUpon>SketchUploaderForm1.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Forms\StarWindowForm.resx">
           <DependentUpon>StarWindowForm.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="Forms\TestForm1.resx">
-          <DependentUpon>TestForm1.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Forms\WorkWithArduinoForm.resx">
           <DependentUpon>WorkWithArduinoForm.cs</DependentUpon>

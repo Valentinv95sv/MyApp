@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 using System.Timers;
 using System.Windows.Forms;
 using ComPortParserDLL;
@@ -15,6 +13,7 @@ namespace MyApp
         private DbClass _dbClass;
         private ComPort _comPort;
         private uploaderClass _uploader= new uploaderClass();
+        private string[][] x;
         
         public WorkWithArduinoForm()
         {
@@ -23,8 +22,25 @@ namespace MyApp
             _dbClass = new DbClass();
             _comPort = new ComPort(comboBox1.Text , 9600);
             _comPort.timer_inint(timer1_Elapsed);
+
         }
         
+        private void LoadTheme()
+        {
+            foreach (Control btns in this.panel1.Controls)
+                
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
+            }
+
+        }
+
         public void Init()
         {
             try
@@ -43,21 +59,22 @@ namespace MyApp
             {
                 MessageBox.Show(ex.Message);
             }
+            //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dataGridView1.Columns.Add("1", "Температура");
+            dataGridView1.Columns.Add("2", "Влажность");
+            dataGridView1.Columns.Add("3", "ДБ");
+            dataGridView1.Columns.Add("4", "Яркость");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             _dbClass.Connect("admin", "1234", "mydatabase");
+            x = _dbClass.Select("new2");
             
         }
+        
         private void getdata()
         {
-            string[][] x = _dbClass.Select("new2");
-            dataGridView1.Columns.Add("1", "1");
-            dataGridView1.Columns.Add("2", "2");
-            dataGridView1.Columns.Add("3", "3");
-            dataGridView1.Columns.Add("4", "4");
-
             int rows = x[0].Length;
             int cols = x.Length;
             string[] a = new string[cols];
@@ -70,33 +87,10 @@ namespace MyApp
                 dataGridView1.Rows.Add(a);
             }
         }
-        
-        
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string[][] x = _dbClass.Select("new2");
-            dataGridView1.Columns.Add("1", "1");
-            dataGridView1.Columns.Add("2", "2");
-            dataGridView1.Columns.Add("3", "3");
-            dataGridView1.Columns.Add("4", "4");
 
-            int rows = x[0].Length;
-            int cols = x.Length;
-            string[] a = new string[cols];
-            for (int i = 0; i < rows; i++)//->
-            {
-                for (int j = 0; j < cols; j++)
-                {
-                    a[j] = x[j][i];
-                }
-                dataGridView1.Rows.Add(a);
-            }
-        }
-        
         private void timer1_Elapsed(object sender, ElapsedEventArgs e)
         {
             string[] a = _comPort.Split(_comPort.getData());
-            dataGridView1.Rows.Add(a);
             string[] c = {"C1", "C2", "C3", "C4"};
             string b = null;
             _dbClass.Insert("new2", a, c);
@@ -104,73 +98,88 @@ namespace MyApp
             {
                 b += i + " | ";
             }
-            textBox4.AppendText(b);
+            //textBox4.AppendText(b);
             b = null;
-            textBox4.AppendText(Environment.NewLine);
+            //textBox4.AppendText(Environment.NewLine);
+            x = _dbClass.Select("new2");
+            dataGridView1.Rows.Add(a);
+            dataGridView1.Refresh();
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {   
+        
+        private void OpenPort_Click(object sender, EventArgs e)
+        {
             _comPort.ConnectToArduino();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void ClosePort_Click(object sender, EventArgs e)
         {
             _comPort.DisconnectFromArduino();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void ClearBtn_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
+            dataGridView1.Columns.Clear();
             
-            textBox4.Clear();
+            dataGridView1.Columns.Add("1", "Температура");
+            dataGridView1.Columns.Add("2", "Влажность");
+            dataGridView1.Columns.Add("3", "ДБ");
+            dataGridView1.Columns.Add("4", "Яркость");
+            dataGridView1.Refresh();
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            _dbClass.deleteAll("new2");
-        }
-
-        private void button9_Click(object sender, EventArgs e)
+        private void CreateTable_Click(object sender, EventArgs e)
         {
             string[] a = {"C1:varchar(100)", "C2:varchar(100)", "C3:varchar(100)", "C4:varchar(100)" };
             if (_dbClass.CreateTable("new2", a))
             {
-                button9.BackColor = Color.Chartreuse;
+                CreateTable.BackColor = Color.Chartreuse;
             }
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void TruncateTable_Click(object sender, EventArgs e)
         {
-            _dbClass.DeleteTable("new2");
-            button9.BackColor = Color.LightGray;
+            _dbClass.deleteAll("new2");
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void PortWrite_Click(object sender, EventArgs e)
         {
-            
             _comPort.Write(textBox5.Text);
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            _comPort.DisconnectFromArduino();
-        }
-
-        private void button12_Click_1(object sender, EventArgs e)
-        {
-            _comPort.DataDetection(_comPort.getData());
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            _dbClass.CreateDB("new3");
+            _dbClass.DeleteTable("new2");
+            CreateTable.BackColor = Color.LightGray;
         }
 
-        
+        private void AllDataFromDB_Click(object sender, EventArgs e)
+        {
+            //string[][] x = _dbClass.Select("new2");
+            dataGridView1.Rows.Clear();
+            dataGridView1.Columns.Clear();
+            dataGridView1.Refresh();
+            dataGridView1.Columns.Add("1", "Температура");
+            dataGridView1.Columns.Add("2", "Влажность");
+            dataGridView1.Columns.Add("3", "ДБ");
+            dataGridView1.Columns.Add("4", "Яркость");
+
+            int rows = x[0].Length;
+            int cols = x.Length;
+            string[] a = new string[cols];
+            for (int i = 0; i < rows; i++)//->
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    a[j] = x[j][i];
+                }
+                dataGridView1.Rows.Add(a);
+            }
+        }
+
+        private void WorkWithArduinoForm_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+        }
     }
 }

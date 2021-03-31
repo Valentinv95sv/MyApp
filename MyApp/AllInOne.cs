@@ -5,14 +5,12 @@ using System.Windows.Forms;
 using System.Windows.Input;
 using WindowsFormsDll;
 using DatabaseDLL;
+using MyApp.Forms;
 
 namespace MyApp
 {
     public partial class AllInOne : Form
     {
-        
-        private DbClass _dbClass = new DbClass();
-        private SketchUploaderForm1 _uploaderForm = new SketchUploaderForm1();
         private Button currentButton;
         private Random random;
         private int tempIndex;
@@ -29,8 +27,6 @@ namespace MyApp
         }
         
 
-        
-        
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -122,7 +118,7 @@ namespace MyApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new FirstDiagramm(), sender);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -162,8 +158,7 @@ namespace MyApp
         {
             Application.Exit();
         }
-
-
+        
         private void btnMaximize_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)

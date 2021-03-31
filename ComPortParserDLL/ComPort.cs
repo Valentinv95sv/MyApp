@@ -74,7 +74,18 @@ namespace ComPortParserDLL
 
         public void Write(string income)
         {
-            myport.Write(income);
+            if (myport.IsOpen)
+            {
+                myport.Write(income);
+                myport.Close();
+            }
+            else
+            {
+                myport.Open();
+                myport.Write(income);
+                myport.Close();
+            }
+            
         }
         
         public void InBuffClear()

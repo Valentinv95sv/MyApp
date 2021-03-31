@@ -32,327 +32,327 @@ namespace MyApp
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.timer1 = new System.Timers.Timer();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.AllDataFromDB = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.PortWrite = new System.Windows.Forms.Button();
+            this.TruncateTable = new System.Windows.Forms.Button();
+            this.CreateTable = new System.Windows.Forms.Button();
+            this.ClearBtn = new System.Windows.Forms.Button();
+            this.ClosePort = new System.Windows.Forms.Button();
+            this.OpenPort = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize) (this.timer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(556, 17);
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 40);
+            this.button1.Size = new System.Drawing.Size(119, 45);
             this.button1.TabIndex = 8;
             this.button1.Text = "Соединение с базой данных";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(23, 409);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 57);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Все записи базы данных";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(163, 409);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 57);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Запись данных с Arduino в базу данных";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // timer1
             // 
             this.timer1.SynchronizingObject = this;
             this.timer1.Elapsed += new System.Timers.ElapsedEventHandler(this.timer1_Elapsed);
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(315, 409);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(94, 57);
-            this.button7.TabIndex = 16;
-            this.button7.Text = "закрыть соединение с Arduino";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(236, 119);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 27);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Данные, полученные с Arduino";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(28, 13);
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Location = new System.Drawing.Point(12, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 28);
+            this.label4.Size = new System.Drawing.Size(329, 28);
             this.label4.TabIndex = 18;
             this.label4.Text = "Даннаые, полученые из базы данных";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button6
+            // label5
             // 
-            this.button6.Location = new System.Drawing.Point(449, 264);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(112, 42);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "Отчистить все поля ";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.Location = new System.Drawing.Point(12, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(170, 29);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "номер Com порта";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button8
+            // comboBox1
             // 
-            this.button8.Location = new System.Drawing.Point(449, 330);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(112, 59);
-            this.button8.TabIndex = 20;
-            this.button8.Text = "Удалить все записи из базы данных";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(12, 29);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(170, 21);
+            this.comboBox1.TabIndex = 29;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 28);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(329, 391);
+            this.dataGridView1.TabIndex = 36;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(364, 12);
+            this.textBox5.Location = new System.Drawing.Point(24, 26);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(158, 20);
             this.textBox5.TabIndex = 23;
             // 
-            // label6
+            // panel1
             // 
-            this.label6.Location = new System.Drawing.Point(275, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 17);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Название БД";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (51)))), ((int) (((byte) (51)))), ((int) (((byte) (76)))));
+            this.panel1.Controls.Add(this.AllDataFromDB);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.PortWrite);
+            this.panel1.Controls.Add(this.TruncateTable);
+            this.panel1.Controls.Add(this.CreateTable);
+            this.panel1.Controls.Add(this.ClearBtn);
+            this.panel1.Controls.Add(this.ClosePort);
+            this.panel1.Controls.Add(this.OpenPort);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(119, 419);
+            this.panel1.TabIndex = 37;
             // 
-            // button9
+            // AllDataFromDB
             // 
-            this.button9.Location = new System.Drawing.Point(603, 311);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(83, 56);
-            this.button9.TabIndex = 30;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(608, 386);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(77, 53);
-            this.button10.TabIndex = 31;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(398, 109);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(135, 46);
-            this.button11.TabIndex = 32;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(576, 110);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(79, 44);
-            this.button12.TabIndex = 33;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click_1);
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(597, 269);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(76, 36);
-            this.button13.TabIndex = 34;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(364, 43);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(157, 20);
-            this.textBox7.TabIndex = 27;
-            // 
-            // label8
-            // 
-            this.label8.Location = new System.Drawing.Point(258, 33);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 39);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "Название колонок таблицы";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(274, 66);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 46);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "номер Com порта";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(363, 80);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(158, 21);
-            this.comboBox1.TabIndex = 29;
+            this.AllDataFromDB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AllDataFromDB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AllDataFromDB.ForeColor = System.Drawing.Color.White;
+            this.AllDataFromDB.Location = new System.Drawing.Point(0, 368);
+            this.AllDataFromDB.Margin = new System.Windows.Forms.Padding(2);
+            this.AllDataFromDB.Name = "AllDataFromDB";
+            this.AllDataFromDB.Size = new System.Drawing.Size(119, 45);
+            this.AllDataFromDB.TabIndex = 16;
+            this.AllDataFromDB.Text = "Все записи базы данных";
+            this.AllDataFromDB.UseVisualStyleBackColor = true;
+            this.AllDataFromDB.Click += new System.EventHandler(this.AllDataFromDB_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(478, 402);
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(0, 315);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 63);
-            this.button4.TabIndex = 35;
-            this.button4.Text = "button4";
+            this.button4.Size = new System.Drawing.Size(119, 53);
+            this.button4.TabIndex = 15;
+            this.button4.Text = "Удалить таблицу в БД";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox4
+            // PortWrite
             // 
-            this.textBox4.Location = new System.Drawing.Point(243, 148);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox4.Size = new System.Drawing.Size(171, 221);
-            this.textBox4.TabIndex = 11;
+            this.PortWrite.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PortWrite.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.PortWrite.ForeColor = System.Drawing.Color.White;
+            this.PortWrite.Location = new System.Drawing.Point(0, 270);
+            this.PortWrite.Margin = new System.Windows.Forms.Padding(2);
+            this.PortWrite.Name = "PortWrite";
+            this.PortWrite.Size = new System.Drawing.Size(119, 45);
+            this.PortWrite.TabIndex = 14;
+            this.PortWrite.Text = "Отправить данные в Com порт";
+            this.PortWrite.UseVisualStyleBackColor = true;
+            this.PortWrite.Click += new System.EventHandler(this.PortWrite_Click);
             // 
-            // dataGridView1
+            // TruncateTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 91);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(203, 277);
-            this.dataGridView1.TabIndex = 36;
+            this.TruncateTable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TruncateTable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.TruncateTable.ForeColor = System.Drawing.Color.White;
+            this.TruncateTable.Location = new System.Drawing.Point(0, 225);
+            this.TruncateTable.Margin = new System.Windows.Forms.Padding(2);
+            this.TruncateTable.Name = "TruncateTable";
+            this.TruncateTable.Size = new System.Drawing.Size(119, 45);
+            this.TruncateTable.TabIndex = 13;
+            this.TruncateTable.Text = "Отчистить все данные в таблице";
+            this.TruncateTable.UseVisualStyleBackColor = true;
+            this.TruncateTable.Click += new System.EventHandler(this.TruncateTable_Click);
+            // 
+            // CreateTable
+            // 
+            this.CreateTable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CreateTable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CreateTable.ForeColor = System.Drawing.Color.White;
+            this.CreateTable.Location = new System.Drawing.Point(0, 180);
+            this.CreateTable.Margin = new System.Windows.Forms.Padding(2);
+            this.CreateTable.Name = "CreateTable";
+            this.CreateTable.Size = new System.Drawing.Size(119, 45);
+            this.CreateTable.TabIndex = 12;
+            this.CreateTable.Text = "Создать таблицу в БД";
+            this.CreateTable.UseVisualStyleBackColor = true;
+            this.CreateTable.Click += new System.EventHandler(this.CreateTable_Click);
+            // 
+            // ClearBtn
+            // 
+            this.ClearBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ClearBtn.ForeColor = System.Drawing.Color.White;
+            this.ClearBtn.Location = new System.Drawing.Point(0, 135);
+            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ClearBtn.Name = "ClearBtn";
+            this.ClearBtn.Size = new System.Drawing.Size(119, 45);
+            this.ClearBtn.TabIndex = 11;
+            this.ClearBtn.Text = "Отчистить все поля";
+            this.ClearBtn.UseVisualStyleBackColor = true;
+            this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
+            // 
+            // ClosePort
+            // 
+            this.ClosePort.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ClosePort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ClosePort.ForeColor = System.Drawing.Color.White;
+            this.ClosePort.Location = new System.Drawing.Point(0, 90);
+            this.ClosePort.Margin = new System.Windows.Forms.Padding(2);
+            this.ClosePort.Name = "ClosePort";
+            this.ClosePort.Size = new System.Drawing.Size(119, 45);
+            this.ClosePort.TabIndex = 10;
+            this.ClosePort.Text = "Закрыть Com порт";
+            this.ClosePort.UseVisualStyleBackColor = true;
+            this.ClosePort.Click += new System.EventHandler(this.ClosePort_Click);
+            // 
+            // OpenPort
+            // 
+            this.OpenPort.Dock = System.Windows.Forms.DockStyle.Top;
+            this.OpenPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.OpenPort.ForeColor = System.Drawing.Color.White;
+            this.OpenPort.Location = new System.Drawing.Point(0, 45);
+            this.OpenPort.Margin = new System.Windows.Forms.Padding(2);
+            this.OpenPort.Name = "OpenPort";
+            this.OpenPort.Size = new System.Drawing.Size(119, 45);
+            this.OpenPort.TabIndex = 9;
+            this.OpenPort.Text = "Открыть Com порт";
+            this.OpenPort.UseVisualStyleBackColor = true;
+            this.OpenPort.Click += new System.EventHandler(this.OpenPort_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(119, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.panel2.Size = new System.Drawing.Size(353, 419);
+            this.panel2.TabIndex = 38;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(472, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.panel3.Size = new System.Drawing.Size(194, 66);
+            this.panel3.TabIndex = 39;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.textBox5);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(472, 66);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(194, 100);
+            this.panel4.TabIndex = 40;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(194, 23);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Отправка данных в платформу";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // WorkWithArduinoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(769, 655);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(666, 419);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Location = new System.Drawing.Point(15, 15);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WorkWithArduinoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.WorkWithArduinoForm_Load);
             ((System.ComponentModel.ISupportInitialize) (this.timer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
         }
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
 
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Panel panel4;
+
+        private System.Windows.Forms.Panel panel3;
+
+        private System.Windows.Forms.Panel panel2;
+
+        private System.Windows.Forms.Button AllDataFromDB;
 
         private System.Windows.Forms.Button button4;
+
+        private System.Windows.Forms.Button ClearBtn;
+        private System.Windows.Forms.Button ClosePort;
+        private System.Windows.Forms.Button CreateTable;
+        private System.Windows.Forms.Button OpenPort;
+        private System.Windows.Forms.Button PortWrite;
+        private System.Windows.Forms.Button TruncateTable;
+
+        private System.Windows.Forms.Panel panel1;
+
+        private System.Windows.Forms.TextBox textBox5;
+
+        private System.Windows.Forms.DataGridView dataGridView1;
 
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
 
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
-
-        private System.Windows.Forms.Button button13;
-
-        private System.Windows.Forms.Button button12;
-
-        private System.Windows.Forms.Button button11;
-
-        private System.Windows.Forms.Button button10;
-
-        private System.Windows.Forms.Button button9;
-
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
-
-        private System.Windows.Forms.Button button8;
-
-        private System.Windows.Forms.Button button6;
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
 
-        private System.Windows.Forms.Button button7;
-
         private System.Timers.Timer timer1;
-
-        private System.Windows.Forms.Button button3;
-
-        private System.Windows.Forms.Button button2;
 
         private System.Windows.Forms.Button button1;
 

@@ -20,7 +20,7 @@ namespace DatabaseDLL
             try
             {
                 _connection = new MySqlConnection(connectionString);
-                MessageBox.Show("connected");
+                //MessageBox.Show("connected");
                 if (this.OpenConnection())
                 {
                     this.CloseConnection();
@@ -203,6 +203,7 @@ namespace DatabaseDLL
         //получить все записи из таблицы
         public string[][] Select(string table)
         {
+            this.CloseConnection();
             string query = "SELECT * FROM " + table;
             string mystring = null;
             int count = 0;

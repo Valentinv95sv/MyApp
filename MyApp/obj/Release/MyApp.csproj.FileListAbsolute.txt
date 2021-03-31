@@ -30,4 +30,5 @@ C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.pdb
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.WorkWithArduinoForm.resources
 C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Release\SrpUxSnapIn.dll
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.DiagrammForm1.resources
-C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.TestForm1.resources
+C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.AllInOne.resources
+C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.Forms.FirstDiagramm.resources
