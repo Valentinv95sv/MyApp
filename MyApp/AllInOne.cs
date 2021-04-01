@@ -128,12 +128,12 @@ namespace MyApp
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new pieChart(), sender);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new LinearChart(), sender);
         }
 
         private void button7_Click_1(object sender, EventArgs e)

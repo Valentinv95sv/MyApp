@@ -164,17 +164,27 @@ namespace MyApp
             dataGridView1.Columns.Add("3", "ДБ");
             dataGridView1.Columns.Add("4", "Яркость");
 
-            int rows = x[0].Length;
-            int cols = x.Length;
-            string[] a = new string[cols];
-            for (int i = 0; i < rows; i++)//->
+            if (x[0].Length == 0)
             {
-                for (int j = 0; j < cols; j++)
-                {
-                    a[j] = x[j][i];
-                }
-                dataGridView1.Rows.Add(a);
+                int[] y = new[] {0,0,0,0};
+                dataGridView1.Rows.Add(y);
             }
+            else
+            {
+                int rows = x[0].Length;
+                int cols = x.Length;
+                string[] a = new string[cols];
+                for (int i = 0; i < rows; i++)//->
+                {
+                    for (int j = 0; j < cols; j++)
+                    {
+                        a[j] = x[j][i];
+                    }
+                    dataGridView1.Rows.Add(a);
+                } 
+            }
+            
+            
         }
 
         private void WorkWithArduinoForm_Load(object sender, EventArgs e)

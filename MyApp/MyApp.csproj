@@ -41,6 +41,18 @@
           <HintPath>..\packages\IntelHexFormatReader.2.2.1\lib\net452\IntelHexFormatReader.dll</HintPath>
           <Private>True</Private>
         </Reference>
+        <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df">
+          <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df">
+          <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df">
+          <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
         <Reference Include="Microsoft.Win32.Registry, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
           <HintPath>..\packages\Microsoft.Win32.Registry.4.3.0\lib\net46\Microsoft.Win32.Registry.dll</HintPath>
           <Private>True</Private>
@@ -134,29 +146,35 @@
         <Compile Include="AllInOne.Designer.cs">
           <DependentUpon>AllInOne.cs</DependentUpon>
         </Compile>
-        <Compile Include="Forms\DiagrammForm1.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="Forms\DiagrammForm1.Designer.cs">
-          <DependentUpon>DiagrammForm1.cs</DependentUpon>
-        </Compile>
         <Compile Include="Forms\FirstDiagramm.cs">
           <SubType>Form</SubType>
         </Compile>
         <Compile Include="Forms\FirstDiagramm.Designer.cs">
           <DependentUpon>FirstDiagramm.cs</DependentUpon>
         </Compile>
+        <Compile Include="Forms\LinearChart.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Forms\LinearChart.Designer.cs">
+          <DependentUpon>LinearChart.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Forms\pieChart.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Forms\pieChart.Designer.cs">
+          <DependentUpon>pieChart.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Forms\SecondDiagramm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Forms\SecondDiagramm.Designer.cs">
+          <DependentUpon>SecondDiagramm.cs</DependentUpon>
+        </Compile>
         <Compile Include="Forms\SketchUploaderForm1.cs">
           <SubType>Form</SubType>
         </Compile>
         <Compile Include="Forms\SketchUploaderForm1.Designer.cs">
           <DependentUpon>SketchUploaderForm1.cs</DependentUpon>
-        </Compile>
-        <Compile Include="Forms\StarWindowForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="Forms\StarWindowForm.Designer.cs">
-          <DependentUpon>StarWindowForm.cs</DependentUpon>
         </Compile>
         <Compile Include="Forms\WorkWithArduinoForm.cs">
           <SubType>Form</SubType>
@@ -170,17 +188,20 @@
         <EmbeddedResource Include="AllInOne.resx">
           <DependentUpon>AllInOne.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="Forms\DiagrammForm1.resx">
-          <DependentUpon>DiagrammForm1.cs</DependentUpon>
-        </EmbeddedResource>
         <EmbeddedResource Include="Forms\FirstDiagramm.resx">
           <DependentUpon>FirstDiagramm.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="Forms\LinearChart.resx">
+          <DependentUpon>LinearChart.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Forms\pieChart.resx">
+          <DependentUpon>pieChart.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Forms\SecondDiagramm.resx">
+          <DependentUpon>SecondDiagramm.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Forms\SketchUploaderForm1.resx">
           <DependentUpon>SketchUploaderForm1.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="Forms\StarWindowForm.resx">
-          <DependentUpon>StarWindowForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Forms\WorkWithArduinoForm.resx">
           <DependentUpon>WorkWithArduinoForm.cs</DependentUpon>

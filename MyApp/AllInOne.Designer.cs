@@ -132,7 +132,7 @@ namespace MyApp
             this.button6.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(238, 60);
             this.button6.TabIndex = 6;
-            this.button6.Text = "Загрузка прошивки";
+            this.button6.Text = "Линейная диаграмма";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -152,7 +152,7 @@ namespace MyApp
             this.button5.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(238, 60);
             this.button5.TabIndex = 5;
-            this.button5.Text = "Загрузка прошивки";
+            this.button5.Text = "Круглая диаграмма";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -172,7 +172,7 @@ namespace MyApp
             this.button4.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(238, 60);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Закрыть порт";
+            this.button4.Text = "пусто";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
