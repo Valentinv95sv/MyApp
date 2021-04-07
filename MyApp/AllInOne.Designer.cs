@@ -39,7 +39,6 @@ namespace MyApp
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -66,7 +65,6 @@ namespace MyApp
             this.panelMenu.Controls.Add(this.button7);
             this.panelMenu.Controls.Add(this.button6);
             this.panelMenu.Controls.Add(this.button5);
-            this.panelMenu.Controls.Add(this.button4);
             this.panelMenu.Controls.Add(this.button3);
             this.panelMenu.Controls.Add(this.button2);
             this.panelMenu.Controls.Add(this.button1);
@@ -87,7 +85,7 @@ namespace MyApp
             this.button9.ForeColor = System.Drawing.Color.Gainsboro;
             this.button9.Image = ((System.Drawing.Image) (resources.GetObject("button9.Image")));
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(0, 500);
+            this.button9.Location = new System.Drawing.Point(0, 440);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.button9.Size = new System.Drawing.Size(238, 60);
@@ -107,7 +105,7 @@ namespace MyApp
             this.button7.ForeColor = System.Drawing.Color.Gainsboro;
             this.button7.Image = ((System.Drawing.Image) (resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 440);
+            this.button7.Location = new System.Drawing.Point(0, 380);
             this.button7.Name = "button7";
             this.button7.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.button7.Size = new System.Drawing.Size(238, 60);
@@ -127,7 +125,7 @@ namespace MyApp
             this.button6.ForeColor = System.Drawing.Color.Gainsboro;
             this.button6.Image = ((System.Drawing.Image) (resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 380);
+            this.button6.Location = new System.Drawing.Point(0, 320);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(238, 60);
@@ -147,7 +145,7 @@ namespace MyApp
             this.button5.ForeColor = System.Drawing.Color.Gainsboro;
             this.button5.Image = ((System.Drawing.Image) (resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 320);
+            this.button5.Location = new System.Drawing.Point(0, 260);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(238, 60);
@@ -156,25 +154,6 @@ namespace MyApp
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.button4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button4.Image = ((System.Drawing.Image) (resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 260);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(238, 60);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "пусто";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -345,7 +324,7 @@ namespace MyApp
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(497, 19);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(95, 33);
+            this.lblTitle.Size = new System.Drawing.Size(145, 50);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "HOME";
             // 
@@ -393,7 +372,6 @@ namespace MyApp
 
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;

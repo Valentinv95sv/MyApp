@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using DatabaseDLL;
+using LiveCharts.Wpf;
+using Series = System.Windows.Forms.DataVisualization.Charting.Series;
 
 namespace MyApp.Forms
 {
@@ -11,8 +13,9 @@ namespace MyApp.Forms
         public pieChart()
         {
             InitializeComponent();
-            dbClass.Connect("admin", "1234", "mydatabase");
+            dbClass.Connect("valentin", "1234", "mydatabase");
             string[][] x = dbClass.Select("new2");
+            string[] seriesArray = {"Температура", "Влажность", "ДБ", "Яркость"};
             int rows = x[0].Length;
             int cols = x.Length;
             int[] a = new int[4];
@@ -31,10 +34,14 @@ namespace MyApp.Forms
             chart1.Series["s1"].IsValueShownAsLabel = true;
             for (int i = 0; i < a.Length; i++)
             {
-                chart1.Series["s1"].Points.AddXY(i, a[i]);
+                //Series series = this.chart1.Series.Add(seriesArray[i]);
+                chart1.Series["s1"].Points.AddXY(seriesArray[i], a[i]);
+                //series.Points.AddXY(i, a[i]);
 
             }
             
         }
+
+        
     }
 }

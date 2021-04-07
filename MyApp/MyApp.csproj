@@ -191,14 +191,8 @@
         <EmbeddedResource Include="Forms\FirstDiagramm.resx">
           <DependentUpon>FirstDiagramm.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="Forms\LinearChart.resx">
-          <DependentUpon>LinearChart.cs</DependentUpon>
-        </EmbeddedResource>
         <EmbeddedResource Include="Forms\pieChart.resx">
           <DependentUpon>pieChart.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="Forms\SecondDiagramm.resx">
-          <DependentUpon>SecondDiagramm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Forms\SketchUploaderForm1.resx">
           <DependentUpon>SketchUploaderForm1.cs</DependentUpon>

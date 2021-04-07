@@ -24,3 +24,16 @@ C:\Users\balamut\RiderProjects\MyApp\SketchUploaderDLL\obj\Debug\SketchUploaderD
 C:\Users\balamut\RiderProjects\MyApp\SketchUploaderDLL\obj\Debug\SketchUploaderDLL.csproj.CopyComplete
 C:\Users\balamut\RiderProjects\MyApp\SketchUploaderDLL\obj\Debug\SketchUploaderDLL.dll
 C:\Users\balamut\RiderProjects\MyApp\SketchUploaderDLL\obj\Debug\SketchUploaderDLL.pdb
+C:\Users\balam\Desktop\github\MyApp1\SketchUploaderDLL\bin\Debug\SketchUploaderDLL.dll
+C:\Users\balam\Desktop\github\MyApp1\SketchUploaderDLL\bin\Debug\SketchUploaderDLL.pdb
+C:\Users\balam\Desktop\github\MyApp1\SketchUploaderDLL\bin\Debug\ArduinoUploader.dll
+C:\Users\balam\Desktop\github\MyApp1\SketchUploaderDLL\bin\Debug\IntelHexFormatReader.dll
+C:\Users\balam\Desktop\github\MyApp1\SketchUploaderDLL\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\balam\Desktop\github\MyApp1\SketchUploaderDLL\bin\Debug\RJCP.SerialPortStream.dll
+C:\Users\balam\Desktop\github\MyApp1\SketchUploaderDLL\bin\Debug\RJCP.SerialPortStream.pdb
+C:\Users\balam\Desktop\github\MyApp1\SketchUploaderDLL\bin\Debug\RJCP.SerialPortStream.xml
+C:\Users\balam\Desktop\github\MyApp1\SketchUploaderDLL\obj\Debug\SketchUploaderDLL.csprojAssemblyReference.cache
+C:\Users\balam\Desktop\github\MyApp1\SketchUploaderDLL\obj\Debug\SketchUploaderDLL.csproj.CoreCompileInputs.cache
+C:\Users\balam\Desktop\github\MyApp1\SketchUploaderDLL\obj\Debug\SketchUploaderDLL.csproj.CopyComplete
+C:\Users\balam\Desktop\github\MyApp1\SketchUploaderDLL\obj\Debug\SketchUploaderDLL.dll
+C:\Users\balam\Desktop\github\MyApp1\SketchUploaderDLL\obj\Debug\SketchUploaderDLL.pdb

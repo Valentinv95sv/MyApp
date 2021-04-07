@@ -46,22 +46,24 @@ namespace MyApp.Forms
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 0);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
             series1.Name = "s1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(800, 450);
+            this.chart1.Size = new System.Drawing.Size(1200, 692);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
             // pieChart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.chart1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "pieChart";
             this.Text = "pieChart";
             ((System.ComponentModel.ISupportInitialize) (this.chart1)).EndInit();

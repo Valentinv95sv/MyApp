@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Drawing;
 
 namespace MyApp
 {
@@ -65,9 +66,8 @@ namespace MyApp
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 45);
+            this.button1.Size = new System.Drawing.Size(178, 60);
             this.button1.TabIndex = 8;
             this.button1.Text = "Соединение с базой данных";
             this.button1.UseVisualStyleBackColor = true;
@@ -81,10 +81,10 @@ namespace MyApp
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Location = new System.Drawing.Point(12, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(18, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(329, 28);
+            this.label4.Size = new System.Drawing.Size(494, 43);
             this.label4.TabIndex = 18;
             this.label4.Text = "Даннаые, полученые из базы данных";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -92,9 +92,11 @@ namespace MyApp
             // label5
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Location = new System.Drawing.Point(12, 0);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(18, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 29);
+            this.label5.Size = new System.Drawing.Size(255, 45);
             this.label5.TabIndex = 21;
             this.label5.Text = "номер Com порта";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,9 +105,10 @@ namespace MyApp
             // 
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 29);
+            this.comboBox1.Location = new System.Drawing.Point(18, 45);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(170, 21);
+            this.comboBox1.Size = new System.Drawing.Size(255, 28);
             this.comboBox1.TabIndex = 29;
             // 
             // dataGridView1
@@ -113,16 +116,18 @@ namespace MyApp
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 28);
+            this.dataGridView1.Location = new System.Drawing.Point(18, 43);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(329, 391);
+            this.dataGridView1.Size = new System.Drawing.Size(494, 501);
             this.dataGridView1.TabIndex = 36;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(24, 26);
+            this.textBox5.Location = new System.Drawing.Point(36, 40);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(158, 20);
+            this.textBox5.Size = new System.Drawing.Size(235, 26);
             this.textBox5.TabIndex = 23;
             // 
             // panel1
@@ -139,8 +144,9 @@ namespace MyApp
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(119, 419);
+            this.panel1.Size = new System.Drawing.Size(178, 544);
             this.panel1.TabIndex = 37;
             // 
             // AllDataFromDB
@@ -148,10 +154,9 @@ namespace MyApp
             this.AllDataFromDB.Dock = System.Windows.Forms.DockStyle.Top;
             this.AllDataFromDB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AllDataFromDB.ForeColor = System.Drawing.Color.White;
-            this.AllDataFromDB.Location = new System.Drawing.Point(0, 368);
-            this.AllDataFromDB.Margin = new System.Windows.Forms.Padding(2);
+            this.AllDataFromDB.Location = new System.Drawing.Point(0, 480);
             this.AllDataFromDB.Name = "AllDataFromDB";
-            this.AllDataFromDB.Size = new System.Drawing.Size(119, 45);
+            this.AllDataFromDB.Size = new System.Drawing.Size(178, 60);
             this.AllDataFromDB.TabIndex = 16;
             this.AllDataFromDB.Text = "Все записи базы данных";
             this.AllDataFromDB.UseVisualStyleBackColor = true;
@@ -162,10 +167,9 @@ namespace MyApp
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 315);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Location = new System.Drawing.Point(0, 420);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 53);
+            this.button4.Size = new System.Drawing.Size(178, 60);
             this.button4.TabIndex = 15;
             this.button4.Text = "Удалить таблицу в БД";
             this.button4.UseVisualStyleBackColor = true;
@@ -176,10 +180,9 @@ namespace MyApp
             this.PortWrite.Dock = System.Windows.Forms.DockStyle.Top;
             this.PortWrite.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.PortWrite.ForeColor = System.Drawing.Color.White;
-            this.PortWrite.Location = new System.Drawing.Point(0, 270);
-            this.PortWrite.Margin = new System.Windows.Forms.Padding(2);
+            this.PortWrite.Location = new System.Drawing.Point(0, 360);
             this.PortWrite.Name = "PortWrite";
-            this.PortWrite.Size = new System.Drawing.Size(119, 45);
+            this.PortWrite.Size = new System.Drawing.Size(178, 60);
             this.PortWrite.TabIndex = 14;
             this.PortWrite.Text = "Отправить данные в Com порт";
             this.PortWrite.UseVisualStyleBackColor = true;
@@ -190,10 +193,9 @@ namespace MyApp
             this.TruncateTable.Dock = System.Windows.Forms.DockStyle.Top;
             this.TruncateTable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.TruncateTable.ForeColor = System.Drawing.Color.White;
-            this.TruncateTable.Location = new System.Drawing.Point(0, 225);
-            this.TruncateTable.Margin = new System.Windows.Forms.Padding(2);
+            this.TruncateTable.Location = new System.Drawing.Point(0, 300);
             this.TruncateTable.Name = "TruncateTable";
-            this.TruncateTable.Size = new System.Drawing.Size(119, 45);
+            this.TruncateTable.Size = new System.Drawing.Size(178, 60);
             this.TruncateTable.TabIndex = 13;
             this.TruncateTable.Text = "Отчистить все данные в таблице";
             this.TruncateTable.UseVisualStyleBackColor = true;
@@ -204,10 +206,9 @@ namespace MyApp
             this.CreateTable.Dock = System.Windows.Forms.DockStyle.Top;
             this.CreateTable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CreateTable.ForeColor = System.Drawing.Color.White;
-            this.CreateTable.Location = new System.Drawing.Point(0, 180);
-            this.CreateTable.Margin = new System.Windows.Forms.Padding(2);
+            this.CreateTable.Location = new System.Drawing.Point(0, 240);
             this.CreateTable.Name = "CreateTable";
-            this.CreateTable.Size = new System.Drawing.Size(119, 45);
+            this.CreateTable.Size = new System.Drawing.Size(178, 60);
             this.CreateTable.TabIndex = 12;
             this.CreateTable.Text = "Создать таблицу в БД";
             this.CreateTable.UseVisualStyleBackColor = true;
@@ -218,12 +219,11 @@ namespace MyApp
             this.ClearBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.ClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ClearBtn.ForeColor = System.Drawing.Color.White;
-            this.ClearBtn.Location = new System.Drawing.Point(0, 135);
-            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ClearBtn.Location = new System.Drawing.Point(0, 180);
             this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Size = new System.Drawing.Size(119, 45);
+            this.ClearBtn.Size = new System.Drawing.Size(178, 60);
             this.ClearBtn.TabIndex = 11;
-            this.ClearBtn.Text = "Отчистить все поля";
+            this.ClearBtn.Text = "Отчистить экранную форму";
             this.ClearBtn.UseVisualStyleBackColor = true;
             this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
@@ -232,10 +232,9 @@ namespace MyApp
             this.ClosePort.Dock = System.Windows.Forms.DockStyle.Top;
             this.ClosePort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ClosePort.ForeColor = System.Drawing.Color.White;
-            this.ClosePort.Location = new System.Drawing.Point(0, 90);
-            this.ClosePort.Margin = new System.Windows.Forms.Padding(2);
+            this.ClosePort.Location = new System.Drawing.Point(0, 120);
             this.ClosePort.Name = "ClosePort";
-            this.ClosePort.Size = new System.Drawing.Size(119, 45);
+            this.ClosePort.Size = new System.Drawing.Size(178, 60);
             this.ClosePort.TabIndex = 10;
             this.ClosePort.Text = "Закрыть Com порт";
             this.ClosePort.UseVisualStyleBackColor = true;
@@ -246,10 +245,9 @@ namespace MyApp
             this.OpenPort.Dock = System.Windows.Forms.DockStyle.Top;
             this.OpenPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.OpenPort.ForeColor = System.Drawing.Color.White;
-            this.OpenPort.Location = new System.Drawing.Point(0, 45);
-            this.OpenPort.Margin = new System.Windows.Forms.Padding(2);
+            this.OpenPort.Location = new System.Drawing.Point(0, 60);
             this.OpenPort.Name = "OpenPort";
-            this.OpenPort.Size = new System.Drawing.Size(119, 45);
+            this.OpenPort.Size = new System.Drawing.Size(178, 60);
             this.OpenPort.TabIndex = 9;
             this.OpenPort.Text = "Открыть Com порт";
             this.OpenPort.UseVisualStyleBackColor = true;
@@ -260,10 +258,11 @@ namespace MyApp
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(119, 0);
+            this.panel2.Location = new System.Drawing.Point(178, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.panel2.Size = new System.Drawing.Size(353, 419);
+            this.panel2.Padding = new System.Windows.Forms.Padding(18, 0, 18, 0);
+            this.panel2.Size = new System.Drawing.Size(530, 544);
             this.panel2.TabIndex = 38;
             // 
             // panel3
@@ -271,10 +270,11 @@ namespace MyApp
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(472, 0);
+            this.panel3.Location = new System.Drawing.Point(708, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.panel3.Size = new System.Drawing.Size(194, 66);
+            this.panel3.Padding = new System.Windows.Forms.Padding(18, 0, 18, 0);
+            this.panel3.Size = new System.Drawing.Size(291, 102);
             this.panel3.TabIndex = 39;
             // 
             // panel4
@@ -282,33 +282,35 @@ namespace MyApp
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.textBox5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(472, 66);
+            this.panel4.Location = new System.Drawing.Point(708, 102);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(194, 100);
+            this.panel4.Size = new System.Drawing.Size(291, 154);
             this.panel4.TabIndex = 40;
             // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 23);
+            this.label1.Size = new System.Drawing.Size(291, 35);
             this.label1.TabIndex = 24;
             this.label1.Text = "Отправка данных в платформу";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // WorkWithArduinoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(666, 419);
+            this.ClientSize = new System.Drawing.Size(999, 544);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Location = new System.Drawing.Point(15, 15);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WorkWithArduinoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.WorkWithArduinoForm_Load);

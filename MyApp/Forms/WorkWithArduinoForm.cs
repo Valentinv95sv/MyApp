@@ -68,7 +68,7 @@ namespace MyApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _dbClass.Connect("admin", "1234", "mydatabase");
+            _dbClass.Connect("valentin", "1234", "mydatabase");
             x = _dbClass.Select("new2");
             
         }
@@ -190,6 +190,16 @@ namespace MyApp
         private void WorkWithArduinoForm_Load(object sender, EventArgs e)
         {
             LoadTheme();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            _dbClass.CreateDB("myDB");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            _dbClass.DeleteDB("myDB");
         }
     }
 }
