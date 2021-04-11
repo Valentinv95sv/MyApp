@@ -20,7 +20,6 @@ C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Release\RJCP.SerialPortStream.pdb
 C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Release\RJCP.SerialPortStream.xml
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.csprojAssemblyReference.cache
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\WindowsFormsDll.SketchUploaderForm1.resources
-C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.Form1.resources
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.Properties.Resources.resources
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.csproj.GenerateResource.cache
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.csproj.CoreCompileInputs.cache
@@ -29,7 +28,6 @@ C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.exe
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.pdb
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.WorkWithArduinoForm.resources
 C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Release\SrpUxSnapIn.dll
-C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.DiagrammForm1.resources
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.AllInOne.resources
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.Forms.FirstDiagramm.resources
 C:\Users\balam\Desktop\github\MyApp1\MyApp\bin\Release\MyApp.exe.config
@@ -86,3 +84,13 @@ C:\Users\balam\Desktop\github\MyApp1\MyApp\obj\Release\MyApp.csproj.CoreCompileI
 C:\Users\balam\Desktop\github\MyApp1\MyApp\obj\Release\MyApp.csproj.CopyComplete
 C:\Users\balam\Desktop\github\MyApp1\MyApp\obj\Release\MyApp.exe
 C:\Users\balam\Desktop\github\MyApp1\MyApp\obj\Release\MyApp.pdb
+C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Release\LiveCharts.dll
+C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Release\LiveCharts.WinForms.dll
+C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Release\LiveCharts.Wpf.dll
+C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Release\LiveCharts.pdb
+C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Release\LiveCharts.xml
+C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Release\LiveCharts.WinForms.pdb
+C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Release\LiveCharts.WinForms.xml
+C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Release\LiveCharts.Wpf.pdb
+C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Release\LiveCharts.Wpf.xml
+C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Release\MyApp.Forms.pieChart.resources

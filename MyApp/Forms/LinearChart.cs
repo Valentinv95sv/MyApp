@@ -11,7 +11,7 @@ namespace MyApp.Forms
         {
             InitializeComponent();
             string[] seriesArray = {"Температура", "Влажность", "ДБ", "Яркость"};
-            dbClass.Connect("valentin", "1234", "mydatabase");
+            dbClass.Connect("valentin", "12345678", "mydatabase");
             string[][] x = dbClass.Select("new2");
             int rows = x[0].Length;
             int cols = x.Length;

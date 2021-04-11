@@ -56,6 +56,7 @@ namespace MyApp.Forms
             series1.Name = "0";
             this.chart1.Series.Add(series1);
             
+            
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series2.Legend = "Legend1";

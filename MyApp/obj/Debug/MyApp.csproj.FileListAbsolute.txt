@@ -94,9 +94,7 @@ C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Debug\LiveCharts.WinForms.pdb
 C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Debug\LiveCharts.WinForms.xml
 C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\balamut\RiderProjects\MyApp\MyApp\bin\Debug\LiveCharts.Wpf.xml
-C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Debug\MyApp.Forms.SecondDiagramm.resources
 C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Debug\MyApp.Forms.pieChart.resources
-C:\Users\balamut\RiderProjects\MyApp\MyApp\obj\Debug\MyApp.Forms.LinearChart.resources
 C:\Users\balam\Desktop\github\MyApp1\MyApp\bin\Debug\MyApp.exe.config
 C:\Users\balam\Desktop\github\MyApp1\MyApp\bin\Debug\MyApp.exe
 C:\Users\balam\Desktop\github\MyApp1\MyApp\bin\Debug\MyApp.pdb

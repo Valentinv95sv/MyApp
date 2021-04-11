@@ -74,16 +74,14 @@ namespace ComPortParserDLL
 
         public void Write(string income)
         {
-            if (myport.IsOpen)
+            if (myport.IsOpen == true)
             {
                 myport.Write(income);
-                myport.Close();
             }
             else
             {
                 myport.Open();
                 myport.Write(income);
-                myport.Close();
             }
             
         }

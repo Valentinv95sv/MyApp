@@ -17,7 +17,7 @@ namespace MyApp.Forms
 
         private void FirstDiagramm_Load(object sender, EventArgs e)
         {
-            _dbClass.Connect("valentin", "1234", "mydatabase");
+            _dbClass.Connect("valentin", "12345678", "mydatabase");
             string[][] x = _dbClass.Select("new2");
             string[] seriesArray = {"Температура", "Влажность", "ДБ", "Яркость"};
 

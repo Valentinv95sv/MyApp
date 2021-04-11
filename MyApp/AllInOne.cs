@@ -2,9 +2,7 @@
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using System.Windows.Input;
 using WindowsFormsDll;
-using DatabaseDLL;
 using MyApp.Forms;
 
 namespace MyApp
@@ -105,11 +103,6 @@ namespace MyApp
         {
             OpenChildForm(new SketchUploaderForm1(), sender);
         }
-        
-        private void button7_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new WorkWithArduinoForm(), sender);
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -121,11 +114,6 @@ namespace MyApp
             OpenChildForm(new FirstDiagramm(), sender);
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             OpenChildForm(new pieChart(), sender);
@@ -134,16 +122,6 @@ namespace MyApp
         private void button6_Click(object sender, EventArgs e)
         {
             OpenChildForm(new LinearChart(), sender);
-        }
-
-        private void button7_Click_1(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
         }
 
         private void btnCloseChildForm_Click(object sender, EventArgs e)

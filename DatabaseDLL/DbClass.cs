@@ -8,6 +8,7 @@ namespace DatabaseDLL
     public class DbClass
     {
         private MySqlConnection _connection;
+        private MySqlConnection _connection2;
         private string message;
 
         //подключение к СУБД
@@ -16,11 +17,13 @@ namespace DatabaseDLL
             
             string connectionString = "SERVER=" + "localhost" + ";" + "DATABASE=" + Database + ";" +
                                       "UID=" + username + ";" + "PASSWORD=" + password + ";";
+            string connectionString2 = "SERVER=" + "localhost" + ";" + "DATABASE=" + "sys" + ";" +
+                                      "UID=" + username + ";" + "PASSWORD=" + password + ";";
             
             try
             {
                 _connection = new MySqlConnection(connectionString);
-                //MessageBox.Show("connected");
+                _connection2 = new MySqlConnection(connectionString2);
                 if (this.OpenConnection())
                 {
                     this.CloseConnection();
@@ -57,6 +60,43 @@ namespace DatabaseDLL
             }
         }
         
+        public bool OpenConnection2()
+        {
+            try
+            {
+                _connection2.Open();
+                return true;
+            }
+            catch(MySqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 0:
+                        message = "Cannot connect to server";
+                        break;
+                    
+                    case 1045:
+                        message = "Invalid username/password";
+                        break;
+                }
+                return false;
+            }
+        }
+        
+        public bool CloseConnection2()
+        {
+            try
+            {
+                _connection2.Close();
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                message = ex.Message;
+                return false;
+            }
+        }
+        
         //закрыть соединение с СУБД
         public bool CloseConnection()
         {
@@ -75,14 +115,15 @@ namespace DatabaseDLL
         //создать БД
         public void CreateDB(string DBName)
         {
+            this._connection.Close();
             string query = String.Format("CREATE DATABASE IF NOT EXISTS {0};", DBName);
 
-            if (this.OpenConnection() == true)
+            if (this.OpenConnection2() == true)
             {
-                MySqlCommand cmd = new MySqlCommand(query, _connection);
+                MySqlCommand cmd = new MySqlCommand(query, _connection2);
                 cmd.ExecuteNonQuery();
                 
-                this.CloseConnection();
+                this.CloseConnection2();
             }
         }
         
@@ -90,14 +131,14 @@ namespace DatabaseDLL
         public void DeleteDB(string DBName)
         {
             this.CloseConnection();
-            string query = String.Format("DROP DATABASE IF EXISTS {0}", DBName);
+            string query = String.Format("DROP DATABASE {0}", DBName);
 
-            if (this.OpenConnection() == true)
+            if (this.OpenConnection2() == true)
             {
-                MySqlCommand cmd = new MySqlCommand(query, _connection);
+                MySqlCommand cmd = new MySqlCommand(query, _connection2);
                 cmd.ExecuteNonQuery();
 
-                this.CloseConnection();
+                this.CloseConnection2();
             }
         }
         

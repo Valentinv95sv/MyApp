@@ -14,6 +14,7 @@ namespace MyApp
         private ComPort _comPort;
         private uploaderClass _uploader= new uploaderClass();
         private string[][] x;
+        string[] c = {"C1", "C2", "C3", "C4"};
         
         public WorkWithArduinoForm()
         {
@@ -38,7 +39,6 @@ namespace MyApp
                     btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
                 }
             }
-
         }
 
         public void Init()
@@ -64,12 +64,17 @@ namespace MyApp
             dataGridView1.Columns.Add("2", "Влажность");
             dataGridView1.Columns.Add("3", "ДБ");
             dataGridView1.Columns.Add("4", "Яркость");
+            
+            
+            dataGridView2.Columns.Add("1", "Температура");
+            dataGridView2.Columns.Add("2", "Влажность");
+            dataGridView2.Columns.Add("3", "ДБ");
+            dataGridView2.Columns.Add("4", "Яркость");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _dbClass.Connect("valentin", "1234", "mydatabase");
-            x = _dbClass.Select("new2");
+            _dbClass.Connect("valentin", "12345678", "mydatabase");
             
         }
         
@@ -90,29 +95,41 @@ namespace MyApp
 
         private void timer1_Elapsed(object sender, ElapsedEventArgs e)
         {
-            string[] a = _comPort.Split(_comPort.getData());
-            string[] c = {"C1", "C2", "C3", "C4"};
-            string b = null;
-            _dbClass.Insert("new2", a, c);
-            foreach (var i in a)
+            //string[] a = _comPort.Split(_comPort.getData());
+            
+            //string b = null;
+            //_dbClass.Insert("new2", a, c);
+            /*foreach (var i in a)
             {
                 b += i + " | ";
             }
-            //textBox4.AppendText(b);
-            b = null;
-            //textBox4.AppendText(Environment.NewLine);
-            x = _dbClass.Select("new2");
-            dataGridView1.Rows.Add(a);
-            dataGridView1.Refresh();
+            
+            b = null;*/
+            //x = _dbClass.Select("new2");
+            
+            //dataGridView2.Rows.Clear();
+            //dataGridView2.Rows.Add(a);
+            //dataGridView2.Refresh();
+        }
+        
+        private void timer2_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            string[] a = _comPort.Split(_comPort.getData());
+            dataGridView2.Rows.Clear();
+            dataGridView2.Rows.Add(a);
+            dataGridView2.Refresh();
         }
         
         private void OpenPort_Click(object sender, EventArgs e)
         {
+            timer2.Enabled = true;
             _comPort.ConnectToArduino();
+            
         }
 
         private void ClosePort_Click(object sender, EventArgs e)
         {
+            timer2.Enabled = false;
             _comPort.DisconnectFromArduino();
         }
 
@@ -155,7 +172,7 @@ namespace MyApp
 
         private void AllDataFromDB_Click(object sender, EventArgs e)
         {
-            //string[][] x = _dbClass.Select("new2");
+            x = _dbClass.Select("new2");
             dataGridView1.Rows.Clear();
             dataGridView1.Columns.Clear();
             dataGridView1.Refresh();
@@ -183,23 +200,23 @@ namespace MyApp
                     dataGridView1.Rows.Add(a);
                 } 
             }
-            
-            
         }
 
         private void WorkWithArduinoForm_Load(object sender, EventArgs e)
         {
             LoadTheme();
         }
-
-        private void button2_Click_1(object sender, EventArgs e)
+        
+        private void button2_Click(object sender, EventArgs e)
         {
-            _dbClass.CreateDB("myDB");
+            _dbClass.CreateDB("mydatabase");
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
-            _dbClass.DeleteDB("myDB");
+            _dbClass.DeleteDB("mydatabase");
         }
+
+        
     }
 }
