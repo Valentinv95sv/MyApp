@@ -21,15 +21,14 @@ namespace MyApp
             InitializeComponent();
             Init();
             _dbClass = new DbClass();
+            _dbClass.Connect("valentin", "12345678", "mydatabase");
             _comPort = new ComPort(comboBox1.Text , 9600);
-            _comPort.timer_inint(timer1_Elapsed);
-
+            //_comPort.timer_inint(timer1_Elapsed);
         }
         
         private void LoadTheme()
         {
             foreach (Control btns in this.panel1.Controls)
-                
             {
                 if (btns.GetType() == typeof(Button))
                 {
@@ -59,6 +58,7 @@ namespace MyApp
             {
                 MessageBox.Show(ex.Message);
             }
+            
             //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dataGridView1.Columns.Add("1", "Температура");
             dataGridView1.Columns.Add("2", "Влажность");
@@ -72,10 +72,26 @@ namespace MyApp
             dataGridView2.Columns.Add("4", "Яркость");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void showall()
         {
-            _dbClass.Connect("valentin", "12345678", "mydatabase");
-            
+            if (x[0] == null)
+            {
+                MessageBox.Show("No data in DB");
+            }
+            else
+            {
+                int rows = x[0].Length;
+                int cols = x.Length;
+                string[] g = new string[cols];
+                for (int i = 0; i < rows; i++)//->
+                {
+                    for (int j = 0; j < cols; j++)
+                    {
+                        g[j] = x[j][i];
+                    }
+                    dataGridView1.Rows.Add(g);
+                } 
+            }
         }
         
         private void getdata()
@@ -93,35 +109,48 @@ namespace MyApp
             }
         }
 
-        private void timer1_Elapsed(object sender, ElapsedEventArgs e)
+        /*private void timer1_Elapsed(object sender, ElapsedEventArgs e)
         {
-            //string[] a = _comPort.Split(_comPort.getData());
+            string[] a = _comPort.Split(_comPort.getData());
             
-            //string b = null;
-            //_dbClass.Insert("new2", a, c);
-            /*foreach (var i in a)
+            string b = null;
+            _dbClass.Insert("new2", a, c);
+            foreach (var i in a)
             {
                 b += i + " | ";
             }
             
-            b = null;*/
-            //x = _dbClass.Select("new2");
+            b = null;
+            x = _dbClass.Select("new2");
             
-            //dataGridView2.Rows.Clear();
-            //dataGridView2.Rows.Add(a);
-            //dataGridView2.Refresh();
-        }
+            dataGridView1.Rows.Clear();
+            dataGridView1.Rows.Add(a);
+            dataGridView1.Refresh();
+        }*/
         
         private void timer2_Elapsed(object sender, ElapsedEventArgs e)
         {
-            string[] a = _comPort.Split(_comPort.getData());
-            dataGridView2.Rows.Clear();
-            dataGridView2.Rows.Add(a);
-            dataGridView2.Refresh();
+            if (_comPort.BufferSize() != 0)
+            {
+                string[] a = _comPort.Split(_comPort.getData());
+                _dbClass.Insert("new2", a, c);
+                dataGridView2.Rows.Clear();
+                dataGridView2.Rows.Add(a);
+                dataGridView2.Refresh();
+                
+                dataGridView1.Rows.Add(a);
+                dataGridView1.Refresh();
+                
+                _comPort.InBuffClear();
+                _comPort.OutBuffClear();
+            }
+            
+            //x = _dbClass.Select("new2");
         }
         
         private void OpenPort_Click(object sender, EventArgs e)
         {
+            
             timer2.Enabled = true;
             _comPort.ConnectToArduino();
             
@@ -129,6 +158,7 @@ namespace MyApp
 
         private void ClosePort_Click(object sender, EventArgs e)
         {
+            
             timer2.Enabled = false;
             _comPort.DisconnectFromArduino();
         }
@@ -147,8 +177,8 @@ namespace MyApp
 
         private void CreateTable_Click(object sender, EventArgs e)
         {
-            string[] a = {"C1:varchar(100)", "C2:varchar(100)", "C3:varchar(100)", "C4:varchar(100)" };
-            if (_dbClass.CreateTable("new2", a))
+            string[] n = {"C1:varchar(100)", "C2:varchar(100)", "C3:varchar(100)", "C4:varchar(100)" };
+            if (_dbClass.CreateTable("new2", n))
             {
                 CreateTable.BackColor = Color.Chartreuse;
             }
@@ -173,31 +203,31 @@ namespace MyApp
         private void AllDataFromDB_Click(object sender, EventArgs e)
         {
             x = _dbClass.Select("new2");
+            
             dataGridView1.Rows.Clear();
-            dataGridView1.Columns.Clear();
+            //dataGridView1.Columns.Clear();
             dataGridView1.Refresh();
-            dataGridView1.Columns.Add("1", "Температура");
-            dataGridView1.Columns.Add("2", "Влажность");
-            dataGridView1.Columns.Add("3", "ДБ");
-            dataGridView1.Columns.Add("4", "Яркость");
-
-            if (x[0].Length == 0)
+            //dataGridView1.Columns.Add("1", "Температура");
+            //dataGridView1.Columns.Add("2", "Влажность");
+            //dataGridView1.Columns.Add("3", "ДБ");
+            //dataGridView1.Columns.Add("4", "Яркость");
+            
+            if (x[0] == null)
             {
-                int[] y = new[] {0,0,0,0};
-                dataGridView1.Rows.Add(y);
+                MessageBox.Show("No data in DB");
             }
             else
             {
                 int rows = x[0].Length;
                 int cols = x.Length;
-                string[] a = new string[cols];
+                string[] g = new string[cols];
                 for (int i = 0; i < rows; i++)//->
                 {
                     for (int j = 0; j < cols; j++)
                     {
-                        a[j] = x[j][i];
+                        g[j] = x[j][i];
                     }
-                    dataGridView1.Rows.Add(a);
+                    dataGridView1.Rows.Add(g);
                 } 
             }
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ComPortParserDLL;
 using MyApp;
 using SketchUploaderDLL;
 
@@ -9,6 +10,7 @@ namespace WindowsFormsDll
     public partial class SketchUploaderForm1 : Form
     {
         private uploaderClass _uploader= new uploaderClass();
+        private ComPort comport;
         
         public SketchUploaderForm1()
         {
@@ -90,6 +92,16 @@ namespace WindowsFormsDll
             {
                 _uploader.uploadCheckSketch(comboBox2.Text);
                 MessageBox.Show("Sketch download proccess is successful");
+                comport = new ComPort(comboBox2.Text, 9600);
+                comport.ConnectToArduino();
+                comport.InBuffClear();
+                comport.OutBuffClear();
+                System.Threading.Thread.Sleep(1000);
+                if (comport.getData()[0].ToString() == "/")
+                {
+                    button3.ForeColor = Color.Chartreuse;
+                }
+                comport.DisconnectFromArduino();
             }
             catch (Exception ex)
             {

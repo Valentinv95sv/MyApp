@@ -45,7 +45,7 @@ namespace ComPortParserDLL
                 myport.PortName = port;
                 myport.BaudRate = baudrate;
                 myport.Open();
-                _timer.Enabled = true;
+                //_timer.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -59,7 +59,7 @@ namespace ComPortParserDLL
             {
                 isConnected = false;
                 myport.Close();
-                _timer.Enabled = false;
+                //_timer.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -148,6 +148,15 @@ namespace ComPortParserDLL
 
             string[] a = new[] {Meteodata[0], Meteodata[1], LightData, SoundData };
             return a;
+        }
+
+        public Boolean checkSketch()
+        {
+            if (myport.ReadExisting() == "/")
+            {
+                return true;
+            }
+            return false;
         }
         
     }

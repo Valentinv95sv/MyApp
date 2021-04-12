@@ -292,6 +292,7 @@ namespace DatabaseDLL
                     return output;
                 }
             }
+            this.CloseConnection();
             return output;
         }
         
@@ -337,6 +338,7 @@ namespace DatabaseDLL
         //отчистить таблицу
         public void deleteAll(string Tablename)
         {
+            this.CloseConnection();
             //string query = "TRUNCATE TABLE mytable";
             string query = String.Format("TRUNCATE TABLE {0}", Tablename);
             if (this.OpenConnection() == true)
