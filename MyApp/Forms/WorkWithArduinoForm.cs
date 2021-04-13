@@ -150,7 +150,6 @@ namespace MyApp
         
         private void OpenPort_Click(object sender, EventArgs e)
         {
-            
             timer2.Enabled = true;
             _comPort.ConnectToArduino();
             
@@ -158,7 +157,6 @@ namespace MyApp
 
         private void ClosePort_Click(object sender, EventArgs e)
         {
-            
             timer2.Enabled = false;
             _comPort.DisconnectFromArduino();
         }
@@ -247,6 +245,10 @@ namespace MyApp
             _dbClass.DeleteDB("mydatabase");
         }
 
+        private void Form_closed(object sender, FormClosedEventArgs e)
+        {
+            _comPort.DisconnectFromArduino();
+        }
         
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace MyApp
 {
@@ -394,6 +395,7 @@ namespace MyApp
             this.Load += new System.EventHandler(this.WorkWithArduinoForm_Load);
             ((System.ComponentModel.ISupportInitialize) (this.timer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
+            this.FormClosed += new FormClosedEventHandler(Form_closed);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
