@@ -11,6 +11,7 @@ namespace WindowsFormsDll
     {
         private uploaderClass _uploader= new uploaderClass();
         private ComPort comport;
+        private Boolean checkload;
         
         public SketchUploaderForm1()
         {
@@ -90,18 +91,38 @@ namespace WindowsFormsDll
         {
             try
             {
-                _uploader.uploadCheckSketch(comboBox2.Text);
-                MessageBox.Show("Sketch download proccess is successful");
-                comport = new ComPort(comboBox2.Text, 9600);
-                comport.ConnectToArduino();
-                comport.InBuffClear();
-                comport.OutBuffClear();
-                System.Threading.Thread.Sleep(1000);
-                if (comport.getData()[0].ToString() == "/")
+                if (textBox1.Text == "" || textBox1.Text == "Error")
                 {
-                    button3.ForeColor = Color.Chartreuse;
+                    MessageBox.Show("выберите файл");
                 }
-                comport.DisconnectFromArduino();
+                else
+                {
+                    label3.Text = "идёт загрузка прошивки";
+                    _uploader.uploadCheckSketch(comboBox2.Text, _uploader.SetModel(), 9600);
+                    System.Threading.Thread.Sleep(1000);
+                    comport = new ComPort(comboBox2.Text, 9600);
+                    
+                    comport.ConnectToArduino();
+                    comport.InBuffClear();
+                    comport.OutBuffClear();
+                    System.Threading.Thread.Sleep(1000);
+                    if (comport.getData()[0].ToString() == "/")
+                    {
+                        checkload = true;
+                    }
+                    comport.DisconnectFromArduino();
+                    
+                    System.Threading.Thread.Sleep(1000);
+                    
+                    _uploader.uploadSketch(textBox1.Text, model: _uploader.SetModel(),
+                        comboBox2.Text, 9600);
+                    MessageBox.Show("Загрузка прошивки прошла успешно");
+                    label3.Text = "";
+                    if (checkload)
+                    {
+                        button3.ForeColor = Color.Chartreuse;
+                    }
+                }
             }
             catch (Exception ex)
             {

@@ -38,7 +38,7 @@ namespace SketchUploaderDLL
             uploader.UploadSketch();
         }
 
-        public void uploadCheckSketch(string port)
+        public void uploadCheckSketch(string port, ArduinoModel model, int baudrate)
         {
             string filePath = "checkSktech.ino.eightanaloginputs.hex";
             ArduinoSketchUploader uploader = new ArduinoSketchUploader(
@@ -46,7 +46,7 @@ namespace SketchUploaderDLL
                 {
                     FileName = filePath,
                     PortName = port,
-                    ArduinoModel = ArduinoModel.NanoR3
+                    ArduinoModel = model
                 });
             uploader.UploadSketch();
             

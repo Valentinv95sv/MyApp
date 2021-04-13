@@ -75,7 +75,7 @@ namespace MyApp
             // 
             // timer1
             // 
-            this.timer1.SynchronizingObject = this;
+            //this.timer1.SynchronizingObject = this;
             // 
             // label4
             // 

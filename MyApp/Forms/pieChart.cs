@@ -13,7 +13,7 @@ namespace MyApp.Forms
         public pieChart()
         {
             InitializeComponent();
-            dbClass.Connect("admin", "123456aA", "mydatabase");
+            dbClass.Connect("valentin", "12345678", "mydatabase");
             string[][] x = dbClass.Select("new2");
             string[] seriesArray = {"Температура", "Влажность", "ДБ", "Яркость"};
             int rows = x[0].Length;
