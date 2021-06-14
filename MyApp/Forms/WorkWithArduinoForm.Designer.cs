@@ -349,10 +349,10 @@ namespace MyApp
             // 
             // button2
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
+            //this.button2.Dock = System.Windows.Forms.DockStyle.Left;
             this.button2.Location = new System.Drawing.Point(472, 166);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 175);
+            this.button2.Size = new System.Drawing.Size(0, 0);
             this.button2.TabIndex = 41;
             this.button2.Text = "Создать БД";
             this.button2.UseVisualStyleBackColor = true;
@@ -360,10 +360,10 @@ namespace MyApp
             // 
             // button3
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
+            //this.button3.Dock = System.Windows.Forms.DockStyle.Left;
             this.button3.Location = new System.Drawing.Point(568, 166);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 175);
+            this.button3.Size = new System.Drawing.Size(0, 0);
             this.button3.TabIndex = 42;
             this.button3.Text = "Удалить БД";
             this.button3.UseVisualStyleBackColor = true;
